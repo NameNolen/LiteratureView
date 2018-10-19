@@ -42,7 +42,7 @@ def insert_creator(fieldname,item,itemtype,value):
     # validate_ItemTypeCreatorType(itemtype,creatortype)
     itemtypecreatortype = ItemTypeCreatorType.objects.filter(creatortype=creatortype,itemtype=itemtype)
     if not itemtypecreatortype:
-        msg = 'Error: ItemType %d:%s don\'t match CreatorType %d:%s' %(itemtype.id,itemtype,creatortype.creatortype,creatortype.id,field.fieldname)
+        msg = 'Error: ItemType %d:%s don\'t match CreatorType %d:%s' %(itemtype.id,itemtype,creatortype.creatortype,creatortype.id)
         return False,msg
     order = 0
     for person in value:
@@ -219,7 +219,7 @@ class FileTypeMimeType(models.Model):
     filetype = models.ForeignKey(FileType)
     mimetype = models.CharField(max_length=200, unique=True)
     def __unicode__(self):
-        return self.name
+        return self.mimetype
 
 # Item model
 class ItemType(models.Model):
