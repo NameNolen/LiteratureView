@@ -1,5 +1,5 @@
 # LiteratureView
-Django app for manage literature and RSS Feed.
+Django website for manage literature and RSS Feed.
 
 # Note
 * Better use latest django version 2.1
