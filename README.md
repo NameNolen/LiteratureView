@@ -8,4 +8,4 @@ Django website for manage literature and RSS Feed.
 * 开发的时候使用sqlite作为数据库，作为示范。部署的时候再使用mysql或者其他数据库。这样开发环境更简单。
 
 # Install the develop mode recently!
-> python setup.py develop
+`python setup.py develop`
