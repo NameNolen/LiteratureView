@@ -1,5 +1,5 @@
 from django.db import models
-from literature.utils import *
+from dj_literature.utils import *
 import os,mimetypes,time
 from bs4 import BeautifulSoup
 """
@@ -216,7 +216,7 @@ class FileType(models.Model):
         return self.filetype
         
 class FileTypeMimeType(models.Model):
-    filetype = models.ForeignKey(FileType)
+    filetype = models.ForeignKey(FileType,on_delete=models.CASCADE,)
     mimetype = models.CharField(max_length=200, unique=True)
     def __unicode__(self):
         return self.mimetype
@@ -229,20 +229,20 @@ class ItemType(models.Model):
         return self.typename
         
 class ItemTypeField(models.Model):
-    itemtype = models.ForeignKey(ItemType)
-    field = models.ForeignKey(Field)
+    itemtype = models.ForeignKey(ItemType,on_delete=models.CASCADE,)
+    field = models.ForeignKey(Field,on_delete=models.CASCADE,)
     orderindex= models.PositiveSmallIntegerField()
 
 class ItemTypeCreatorType(models.Model):
-    itemtype = models.ForeignKey(ItemType)
-    creatortype = models.ForeignKey(CreatorType)
+    itemtype = models.ForeignKey(ItemType,on_delete=models.CASCADE,)
+    creatortype = models.ForeignKey(CreatorType,on_delete=models.CASCADE,)
     primaryfield= models.PositiveSmallIntegerField()
 
 #class ItemDataValue(models.Model):
 #    value = models.TextField()
 
 class Item(models.Model):
-    itemtype = models.ForeignKey(ItemType)
+    itemtype = models.ForeignKey(ItemType,on_delete=models.CASCADE,)
     dateadded = models.DateTimeField('create date', auto_now_add=True)
     datemodified = models.DateTimeField('last modified', auto_now=True)
     key = models.CharField(max_length=200, unique=True)
@@ -264,17 +264,17 @@ class Item(models.Model):
         return '/'.join([self.itemtype.typename,self.title()])
 
 class ItemData(models.Model):
-    item = models.ForeignKey(Item)
-    field = models.ForeignKey(Field)
+    item = models.ForeignKey(Item,on_delete=models.CASCADE,)
+    field = models.ForeignKey(Field,on_delete=models.CASCADE,)
 #    value = models.ForeignKey(ItemDataValue)
     value = models.TextField()
     def __unicode__(self):
         return self.field.fieldname + ': ' + self.value
       
 class ItemCreator(models.Model):
-    item = models.ForeignKey(Item)
-    creator = models.ForeignKey(Creator)
-    creatortype = models.ForeignKey(CreatorType)
+    item = models.ForeignKey(Item,on_delete=models.CASCADE,)
+    creator = models.ForeignKey(Creator,on_delete=models.CASCADE,)
+    creatortype = models.ForeignKey(CreatorType,on_delete=models.CASCADE,)
     orderindex = models.PositiveSmallIntegerField()
     def __unicode__(self):
         return str(self.item.id)
@@ -282,7 +282,7 @@ class ItemCreator(models.Model):
 
 class Collection(models.Model):
     collectionname = models.CharField(max_length=200, unique=True)
-    parentcollection = models.ForeignKey('self',blank=True)
+    parentcollection = models.ForeignKey('self',blank=True,on_delete=models.CASCADE,)
     dateadded = models.DateTimeField('create date', auto_now_add=True)
     datemodified = models.DateTimeField('last modified', auto_now=True)
     key = models.CharField(max_length=200, unique=True)
@@ -290,12 +290,12 @@ class Collection(models.Model):
         return self.collectionname
 
 class CollectionItem(models.Model):
-    collection = models.ForeignKey(Collection)
-    item = models.ForeignKey(Item)
+    collection = models.ForeignKey(Collection,on_delete=models.CASCADE,)
+    item = models.ForeignKey(Item,on_delete=models.CASCADE,)
     orderindex = models.PositiveSmallIntegerField()
-        
+
 class DeletedItem(models.Model):
-    item = models.ForeignKey(Item)
+    item = models.ForeignKey(Item,on_delete=models.CASCADE,)
     datedeleted = models.DateTimeField('deleted date', auto_now_add=True)
     def __unicode__(self):
         return str(self.item.id)
@@ -344,8 +344,8 @@ def itemattachment_filename(instance, filename):
     return os.path.join('literature/attachments',instance.item.key, newname)
 
 class ItemAttachment(models.Model):
-    item = models.ForeignKey(Item)
-    sourceitem = models.ForeignKey(Item,related_name='+')
+    item = models.ForeignKey(Item,on_delete=models.CASCADE,)
+    sourceitem = models.ForeignKey(Item,related_name='+',on_delete=models.CASCADE,)
     attachment = models.FileField(upload_to=itemattachment_filename)
     mimetype = models.CharField(max_length=200)
     #?? filetype 
@@ -368,13 +368,12 @@ models.signals.post_delete.connect(attachment_delete, sender=ItemAttachment)
 class ItemNote(models.Model):
     title = models.CharField(max_length=255)
     note = models.TextField('Content')
-    item = models.ForeignKey(Item)
-    sourceitem = models.ForeignKey(Item,related_name='+')
+    item = models.ForeignKey(Item,on_delete=models.CASCADE,)
+    sourceitem = models.ForeignKey(Item,related_name='+',on_delete=models.CASCADE,) # maybe don't delete along the source item
     def __unicode__(self):
         return str(self.item.id)
 
 # Tag model
-
 class Tag(models.Model):
     name = models.CharField(max_length=200, unique=True)
     tagtype = models.PositiveSmallIntegerField(default=1)
@@ -385,6 +384,6 @@ class Tag(models.Model):
         return self.name
 
 class ItemTag(models.Model):
-    item = models.ForeignKey(Item)
-    tag = models.ForeignKey(Tag)
+    item = models.ForeignKey(Item,on_delete=models.CASCADE,)
+    tag = models.ForeignKey(Tag,on_delete=models.CASCADE,)
 
