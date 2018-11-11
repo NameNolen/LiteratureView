@@ -1,0 +1,409 @@
+TY  - JOUR
+TI  - Rational Design of Hydrogen-Donor Solvents for Direct Coal Liquefaction
+AU  - Hou, Peidong
+AU  - Zhou, Yuwei
+AU  - Guo, Wenping
+AU  - Ren, Pengju
+AU  - Guo, Qiang
+AU  - Xiang, Hongwei
+AU  - Li, Yongwang
+AU  - Wen, Xiaodong
+AU  - Yang, Yong
+T2  - Energy & Fuels
+AB  - To facing the challenge in direct coal liquefaction (DCL) processes, optimal hydrogen-donor solvent (H-donor) can dramatically moderate coal liquefaction conditions. A rational design approach was proposed to hunting the optimal H-donor candidates based on density functional theory (DFT) calculations combining the searching algorithm. Firstly, the attempt was made to determine which hydrogen-donor mechanistic pathway (concerted or stepwised) is dominant by using different set of model compounds of H-donors and coal radicals. The calculations show that the concerted hydrogen transfer route promoted by coal radicals is the dominant pathway. The C-H BDEs are proved to be a valid metric for hydrogen-donor ability of H-donors for the great scaling relations between C-H BDEs and reaction barriers (R2=0.98). Then the framework for rational design of H-donor candidates is developed to seek molecules with low C-H BDEs based on inverse molecular design strategy. In the searching procedure, the chemical structure of parent molecule was varied by appropriate substituent from a predefined library (15 substituents). To reduce searching space, four empirical rules were proposed to guide the structural modifications. Finally, the designed H-donor candidates were validated by reaction barrier calculations. It was confirmed that the inverse molecular design approach used is effective and successful for seeking H-donors with lower active barriers, which open a window for the rational design of optimal H-donors to improve the yields of the liquid products from coal under mild conditions.
+DA  - 2018/03/12/
+PY  - 2018
+DO  - 10.1021/acs.energyfuels.7b03947
+DP  - ACS Publications
+VL  - 32
+IS  - 4
+SP  - 4715
+EP  - 4723
+J2  - Energy Fuels
+SN  - 0887-0624
+UR  - https://doi.org/10.1021/acs.energyfuels.7b03947
+Y2  - 2018/03/20/09:11:53
+L1  - files/8548/hou et al_2018_Rational Design of Hydrogen-Donor Solvents for Direct Coal Liquefaction.pdf
+ER  - 
+
+TY  - JOUR
+TI  - Intrinsic composition and electronic effects of multicomponent platinum nanocatalysts with high activity and selectivity for ethanol oxidation reaction
+AU  - Dai, Lin-Xiu
+AU  - Wang, Xinyu
+AU  - Yang, Sheng-Song
+AU  - Zhang, Tao
+AU  - Ren, Pengju
+AU  - Ye, Jinyu
+AU  - Nan, Bing
+AU  - Wen, X.
+AU  - Zhou, Zhi-You
+AU  - Si, Rui
+AU  - Yan, Chun-Hua
+AU  - Zhang, Yawen
+T2  - Journal of Materials Chemistry A
+AB  - The sluggish kinetics of ethanol oxidation reaction (EOR) challenges us to design and synthesize high-performance multicomponent nanocatalysts. Herein, we report the intrinsic composition and electronic effects for achieving the enhanced catalytic performances towards EOR by the combination of experiments and density functional theory (DFT) computations. Late 3d transition metals and main group (IIIA and IVA) metals were introduced to construct ternary Pt3RhM (M= Fe, Co, Ni, Cu; Ga, In, Sn, Pb) nanoalloys with a similar geometric structure (nearly spherical) and crystallize size (ca. 8.5 nm) by one-pot solvothermal method. The main group metals outperform the transition metals in the enhancement of the EOR activity and CO2 selectivity. Especially, Pt3RhSn/C exhibits 67- and 7-fold enhancements of the specific activity and mass activity at 0.45 V (vs RHE) for EOR in acidic condition, compared with the commercial Pt/C catalyst. The trends in catalytic activity were explained by DFT calculations which established a volcano-shaped relationship between the EOR activity and the sum of the oxygen and carbon binding energies (EO+EC). Among above catalysts, the state-of-the-art Pt3RhSn/C catalyst wins in an optimum EO+EC value with a moderate adsorption strength of stable intermediates. In addition, the CO2 selectivity is linearly correlated with the sum of oxygen and H2O binding energies (EO+EH2O), which matches well with the experimental results of typical catalysts. Therefore, the EO+EC and EO+EH2O were creatively served as the activity and selectivity descriptors to rationalize and predict these chemical trends presented in the experiments of nanoalloys catalyzed EOR. The revealed concept that the composition-performance relationship origins from the synergistic electronic effect of the nanoalloys, promises an alternative strategy for developing novel solid catalysts towards EOR.
+DA  - 2018/05/16/
+PY  - 2018
+DO  - 10.1039/C8TA03320J
+DP  - pubs.rsc.org
+VL  - 6
+SP  - 11270
+EP  - 11280
+J2  - J. Mater. Chem. A
+LA  - en
+SN  - 2050-7496
+UR  - http://pubs.rsc.org/en/content/articlelanding/2018/ta/c8ta03320j
+Y2  - 2018/05/28/03:48:37
+L1  - files/8662/Dai et al_2018_Intrinsic composition and electronic effects of multicomponent platinum.pdf
+ER  - 
+
+TY  - JOUR
+TI  - NiFe (Oxy) Hydroxides Derived from NiFe Disulfides as an Efficient Oxygen Evolution Catalyst for Rechargeable Zn–Air Batteries: The Effect of Surface S Residues
+AU  - Wang, Tanyuan
+AU  - Nam, Gyutae
+AU  - Jin, Yue
+AU  - Wang, Xingyu
+AU  - Ren, Pengju
+AU  - Kim, Min Gyu
+AU  - Liang, Jiashun
+AU  - Wen, Xiaodong
+AU  - Jang, Haeseong
+AU  - Han, Jiantao
+AU  - Huang, Yunhui
+AU  - Li, Qing
+AU  - Cho, Jaephil
+T2  - Advanced Materials
+AB  - A facile H2O2 oxidation treatment to tune the properties of metal disulfides for oxygen evolution reaction (OER) activity enhancement is introduced. With this method, the degree of oxidation can be readily controlled and the effect of surface S residues in the resulted metal (oxy)hydroxides for the OER is revealed for the first time. The developed NiFe (oxy)hydroxide catalyst with residual S demonstrates an extraordinarily low OER overpotential of 190 mV at the current density of 10 mA cm−2 after coupling with carbon nanotubes, and outstanding performance in Zn–air battery tests. Theoretical calculation suggests that the surface S residues can significantly reduce the adsorption free energy difference between O* and OH* intermediates on the Fe sites, which should account for the high OER activity of NiFe (oxy)hydroxide catalysts. This work provides significant insight regarding the effect of surface heteroatom residues in OER electrocatalysis and offers a new strategy to design high-performance and cost-efficient OER catalysts.
+DA  - 2018///
+PY  - 2018
+DO  - 10.1002/adma.201800757
+DP  - Wiley Online Library
+VL  - 30
+IS  - 27
+SP  - 1800757
+LA  - en
+SN  - 1521-4095
+ST  - NiFe (Oxy) Hydroxides Derived from NiFe Disulfides as an Efficient Oxygen Evolution Catalyst for Rechargeable Zn–Air Batteries
+UR  - https://onlinelibrary.wiley.com/doi/abs/10.1002/adma.201800757
+Y2  - 2018/05/28/03:50:02
+L1  - files/8664/Wang et al_NiFe (Oxy) Hydroxides Derived from NiFe Disulfides as an Efficient Oxygen.pdf
+KW  - Zn–air batteries
+KW  - oxygen evolution reaction
+KW  - energy storage
+KW  - NiFe hydroxides
+KW  - residual S
+ER  - 
+
+TY  - JOUR
+TI  - Hydrogen Adsorption Structures and Energetics on Iron Surfaces at High Coverage
+AU  - Wang, Tao
+AU  - Wang, Shengguang
+AU  - Luo, Qiquan
+AU  - Li, Yong-Wang
+AU  - Wang, Jianguo
+AU  - Beller, Matthias
+AU  - Jiao, Haijun
+T2  - The Journal of Physical Chemistry C
+DA  - 2014/02/27/
+PY  - 2014
+DO  - 10.1021/jp410635z
+DP  - Crossref
+VL  - 118
+IS  - 8
+SP  - 4181
+EP  - 4188
+LA  - en
+SN  - 1932-7447, 1932-7455
+UR  - http://pubs.acs.org/doi/10.1021/jp410635z
+Y2  - 2018/08/27/06:30:18
+L1  - files/8779/Wang et al. - 2014 - Hydrogen Adsorption Structures and Energetics on I.pdf
+L1  - files/8781/Wang et al_2014_Hydrogen Adsorption Structures and Energetics on Iron Surfaces at High Coverage.pdf
+ER  - 
+
+TY  - JOUR
+TI  - Atomically Dispersed Pd on Nanodiamond/Graphene Hybrid for Selective Hydrogenation of Acetylene
+AU  - Huang, Fei
+AU  - Deng, Yuchen
+AU  - Chen, Yunlei
+AU  - Cai, Xiangbin
+AU  - Peng, Mi
+AU  - Jia, Zhimin
+AU  - Ren, Pengju
+AU  - Xiao, Dequan
+AU  - Wen, Xiaodong
+AU  - Wang, Ning
+AU  - Liu, Hongyang
+AU  - Ma, Ding
+T2  - Journal of the American Chemical Society
+AB  - We reported here a strategy to use a defective nanodiamond-graphene (ND@G) to prepare an atomically dispersed metal catalyst, i.e., in the current case atomically dispersed palladium catalyst which is used for selective hydrogenation of acetylene in the presence of abundant ethylene. The catalyst exhibits remarkable performance for the selective conversion of acetylene to ethylene: high conversion (100%), ethylene selectivity (90%), and good stability. The unique structure of the catalyst (i.e., atomically dispersion of Pd atoms on graphene through Pd–C bond anchoring) blocks the formation of unselective subsurface hydrogen species and ensures the facile desorption of ethylene against the overhydrogenation to undesired ethane, which is the key for the outstanding selectivity of the catalyst.
+DA  - 2018/09/24/
+PY  - 2018
+DO  - 10.1021/jacs.8b07476
+DP  - ACS Publications
+J2  - J. Am. Chem. Soc.
+SN  - 0002-7863
+UR  - https://doi.org/10.1021/jacs.8b07476
+Y2  - 2018/10/12/03:15:08
+L1  - files/8875/Huang et al_2018_Atomically Dispersed Pd on Nanodiamond-Graphene Hybrid for Selective.pdf
+ER  - 
+
+TY  - JOUR
+TI  - Intercalation Mechanisms of Fe Atoms underneath A Graphene Monolayer on Ru(0001)
+AU  - Zhao, Peng
+AU  - Ren, Pengju
+AU  - Weststrate, C. J. Kees-Jan
+AU  - Xu, Yuqun
+AU  - Cao, Dong-Bo
+AU  - Xiang, Hongwei
+AU  - Xu, Jian
+AU  - Yang, Yong
+AU  - Li, Yong-Wang
+AU  - Niemantsverdriet, J. W. Hans
+AU  - Wen, Xiaodong
+AU  - Yu, Xin
+T2  - The Journal of Physical Chemistry C
+AB  - The intercalation process of iron atoms in the interface between graphene and Ru(0001) was systematically investigated both experimentally and computationally. Scanning tunneling microscopy and low-energy electron diffraction indicate that Fe intercalates at 700 K in the graphene/Ru(0001) system, where the graphene monolayer covers the whole substrate. An atomic-level understanding of the process is achieved using dispersion-corrected density functional theory (DFT) calculation. The results indicate that single-Fe atom intercalation causes only minor energy changes in the system. In contrast, the intercalation of a Fe dimer leads to a considerable drop in the total energy, more than twice the energy change in the case of the single-atom intercalation. In a sequential process, intercalation of the second Fe releases more energy, indicating that once the initial intercalation occurs, the subsequent process is thermodynamically more favored than the first. Combining the experimental observations with theoretical insights from the DFT calculations, we provide a clear picture of Fe intercalation into graphene/Ru(0001), which we believe is of interest to the field of interface and materials science and catalysis.
+DA  - 2018/10/11/
+PY  - 2018
+DO  - 10.1021/acs.jpcc.8b05370
+DP  - ACS Publications
+VL  - 122
+IS  - 40
+SP  - 22903
+EP  - 22910
+J2  - J. Phys. Chem. C
+SN  - 1932-7447
+UR  - https://doi.org/10.1021/acs.jpcc.8b05370
+Y2  - 2018/10/12/03:15:19
+L1  - files/8876/Zhao et al_2018_Intercalation Mechanisms of Fe Atoms underneath A Graphene Monolayer on Ru(0001).pdf
+ER  - 
+
+TY  - JOUR
+TI  - CO Adsorption on Pt(111): From Isolated Molecules to Ordered High-Coverage Structures
+AU  - Gunasooriya, G. T. Kasun Kalhara
+AU  - Saeys, Mark
+T2  - ACS Catalysis
+AB  - CO Adsorption on Pt(111): From Isolated Molecules to Ordered High-Coverage Structures
+DA  - 2018/10/05/
+PY  - 2018
+DO  - 10.1021/acscatal.8b02371
+DP  - pubs.acs.org
+LA  - en
+ST  - CO Adsorption on Pt(111)
+UR  - https://pubs.acs.org/doi/full/10.1021/acscatal.8b02371
+AN  - world
+Y2  - 2018/10/15/07:20:01
+L1  - files/8880/Gunasooriya_Saeys_2018_CO Adsorption on Pt(111).pdf
+ER  - 
+
+TY  - JOUR
+TI  - CO Adsorption Site Preference on Platinum: Charge Is the Essence
+AU  - Kalhara Gunasooriya, G. T. Kasun
+AU  - Saeys, Mark
+T2  - ACS Catalysis
+AB  - The adsorption of CO on transition-metal surfaces is a key step in catalysis and a reference system for surface science and computational catalysis. Here, the change in CO site preference with coverage, from top to bridge and back to top, is analyzed using charge transfer and chemical bonding. The relative stability of top and bridge sites is related to the variation in the surface platinum charge with CO coverage. Both the Pt–C σ* (Pauli repulsion) and the C–O π* (back-donation) occupancies increase with platinum charge; however, destabilizing Pauli repulsion dominates over stabilizing back-donation, and adsorption weakens with increasing surface charge. CO at the top sites is more sensitive to Pauli repulsion, leading to a change in site preference from top to bridge with increasing platinum charge and, consequently, with increasing CO coverage. The higher back-donation at the bridge sites eventually switches the site preference back to top near monolayer coverage.
+DA  - 2018/05/04/
+PY  - 2018
+DO  - 10.1021/acscatal.8b00214
+DP  - ACS Publications
+VL  - 8
+IS  - 5
+SP  - 3770
+EP  - 3774
+J2  - ACS Catal.
+ST  - CO Adsorption Site Preference on Platinum
+UR  - https://doi.org/10.1021/acscatal.8b00214
+Y2  - 2018/10/15/07:55:38
+L1  - files/8882/Kalhara Gunasooriya_Saeys_2018_CO Adsorption Site Preference on Platinum.pdf
+L1  - files/8883/Kalhara Gunasooriya_Saeys_2018_CO Adsorption Site Preference on Platinum.pdf
+ER  - 
+
+TY  - JOUR
+TI  - Graphdiyne-Supported Single-Atom-Sized Fe Catalysts for the Oxygen Reduction Reaction: DFT Predictions and Experimental Validations
+AU  - Gao, Yuan
+AU  - Cai, Zhewei
+AU  - Wu, Xingchen
+AU  - Lv, Zhilie
+AU  - Wu, Ping
+AU  - Cai, Chenxin
+T2  - ACS Catalysis
+AB  - Single-atom-sized catalysts (often called single atom catalysts) are highly desired for maximizing the efficiency of metal atom use. However, their synthesis is a major challenge that largely depends on finding an appropriate supporting substrate to achieve a well-defined and highly dispersed single atom. This work demonstrates, based on density functional theory (DFT) predictions and experimental validations, that graphdiyne is a good substrate for anchoring Fe atoms through the formation of covalent Fe–C bonds to produce graphdiyne-supported single-atom-sized Fe catalysts (Fe–graphdiyne catalysts); moreover, this catalyst shows high catalytic activity to oxygen reduction reactions (ORRs) similar to or even slightly better than the precious metal benchmark (commercial 20 wt % Pt/C catalyst). DFT predicts that the O2 molecule can bind with an Fe atom, and the electron transformation process of ORRs occurs through a 4e– pathway. To validate the theoretical predictions, the Fe–graphdiyne catalyst was then synthesized by a reduction of Fe3+ ions adsorbed on a graphdiyne surface in aqueous solution, and its electrocatalytic activities toward ORR were experimentally evaluated in alkaline electrolytes (0.1 M KOH). The electrochemical measurements indicate that the Fe–graphdiyne catalyst can facilitate the 4e– ORR while limiting the 2e– transfer reaction, showing a high 4e– selectivity for ORRs and a good agreement with DFT predictions. The results presented here demonstrate that graphdiyne can provide a unique platform for synthesizing well-defined and uniform single-atom-sized metal catalysts with high catalytic activity toward ORRs.
+DA  - 2018/10/02/
+PY  - 2018
+DO  - 10.1021/acscatal.8b02360
+DP  - ACS Publications
+SP  - 10364
+EP  - 10374
+J2  - ACS Catal.
+ST  - Graphdiyne-Supported Single-Atom-Sized Fe Catalysts for the Oxygen Reduction Reaction
+UR  - https://doi.org/10.1021/acscatal.8b02360
+Y2  - 2018/10/18/10:22:26
+L1  - files/8895/Gao et al_2018_Graphdiyne-Supported Single-Atom-Sized Fe Catalysts for the Oxygen Reduction.pdf
+ER  - 
+
+TY  - JOUR
+TI  - Catalytic Hydrogenation of CO2 to Isoparaffins over Fe-Based Multifunctional Catalysts
+AU  - Wei, Jian
+AU  - Yao, Ruwei
+AU  - Ge, Qingjie
+AU  - Wen, Zhiyong
+AU  - Ji, Xuewei
+AU  - Fang, Chuanyan
+AU  - Zhang, Jixin
+AU  - Xu, Hengyong
+AU  - Sun, Jian
+T2  - ACS Catalysis
+AB  - Direct conversion of CO2 into isoparaffins, ideal clean hydrocarbon fuel components, would be an eco-friendly way of mitigating CO2 emissions and replacing fossil fuels. Herein, we realize a one-step high-yield synthesis of isoparaffins from CO2 hydrogenation, catalyzed by a multifunctional Na–Fe3O4/HMCM-22 catalyst. A selectivity of 82% among hydrocarbons was achieved for C4+ hydrocarbons, of which isoparaffins could account for 74%, while CO selectivity was as low as 17% at a CO2 conversion of 26%. The high yield to isoparaffins was derived owing to well matching of three tandem reactions comprising reverse water–gas shift, C–C coupling and isomerization. Unique pore structure and appropriate Brønsted acid properties of HMCM-22 effectively suppressed aromatization, while promoting isomerization. Coke deposition inside the micropores of HMCM-22 causes the decline of isoparaffin yield without changing the total yield of heavy hydrocarbons. Both the physicochemical properties and catalytic performances of the catalysts could still keep their original levels after several reaction-regeneration cycles, indicating a promising potential application in the future commercialization process of CO2 hydrogenation.
+DA  - 2018/09/17/
+PY  - 2018
+DO  - 10.1021/acscatal.8b02267
+DP  - ACS Publications
+SP  - 9958
+EP  - 9967
+J2  - ACS Catal.
+UR  - https://doi.org/10.1021/acscatal.8b02267
+Y2  - 2018/10/18/10:29:55
+ER  - 
+
+TY  - JOUR
+TI  - Crystal Morphology Control of LTL-Type Zeolite Crystals
+AU  - Larlus, Olivier
+AU  - Valtchev, Valentin P.
+T2  - Chemistry of Materials
+AB  - The effects of the chemical composition of the starting gel, aging time, and crystallization temperature on the crystal size and morphology of zeolite L were studied. The chemical variables were the water content, concentration of potassium hydroxide, substitution of potassium by sodium, introduction of small amounts of barium, and the Si/Al ratio of the initial gel. The changes in the crystal morphology were evaluated by the aspect ratio of the prismatic ((100) and (1−10)) and pinacoidal (001) faces. The water content in the system was found to have the most pronounced effect on this ratio, providing crystals with a prismatic/pinacoidal face ratio between 0.5 and 3. Among the other chemical parameters, the alkalinity of the system had a pronounced effect on the nucleation and thus on the ultimate crystal size. The effects of potassium/sodium substitution and the introduction of barium in the starting gel on the zeolite L morphology were negligible. The interdependence of the chemical variables, crystallization temperature, and aging time and their impact on the crystal size and morphology is discussed. The crystal size and morphology of zeolite L were also influenced by the variation of the aging time and crystallization temperature. Thus, long aging of the gel (1−4 weeks) under ambient conditions provided nanosized crystals with narrow particle size distribution, while the increase of crystallization temperatures resulted in the formation of large (4−5 μm) crystals with high prismatic/pinacoidal faces ratios. The study allowed a fine-tuning of the size (from 140 nm to 7 μm) and of the morphology of zeolite L crystals, which varied from long prismatic crystals terminated by a small pinacoid to coin-like crystals with very short prismatic faces and a well-developed pinacoid. The changes in the aspect ratio between prismatic/pinacoidal faces lead to changes in the number of pore openings per total external surface. This number, together with the variation of the length of the prismatic faces, is expected to have an impact on the performance of the material.
+DA  - 2004/08/01/
+PY  - 2004
+DO  - 10.1021/cm0498741
+DP  - ACS Publications
+VL  - 16
+IS  - 17
+SP  - 3381
+EP  - 3389
+J2  - Chem. Mater.
+SN  - 0897-4756
+UR  - https://doi.org/10.1021/cm0498741
+Y2  - 2018/10/22/12:25:54
+L1  - files/8889/Larlus_Valtchev_2004_Crystal Morphology Control of LTL-Type Zeolite Crystals.pdf
+L1  - files/8890/Larlus_Valtchev_2004_Crystal Morphology Control of LTL-Type Zeolite Crystals.pdf
+ER  - 
+
+TY  - JOUR
+TI  - One-Pot Pyrolysis to N-Doped Graphene with High-Density Pt Single Atomic Sites as Heterogeneous Catalyst for Alkene Hydrosilylation
+AU  - Zhu, Youqi
+AU  - Cao, Tai
+AU  - Cao, Chuanbao
+AU  - Luo, Jun
+AU  - Chen, Wenxing
+AU  - Zheng, Lirong
+AU  - Dong, Juncai
+AU  - Zhang, Jian
+AU  - Han, Yunhu
+AU  - Li, Zhi
+AU  - Chen, Chen
+AU  - Peng, Qing
+AU  - Wang, Dingsheng
+AU  - Li, Yadong
+T2  - ACS Catalysis
+AB  - Development of noble-metal single atomic site catalysts with high metal loading is highly required for many important chemical reactions but proves to be very challenging. Herein, we report a Na2CO3 salt-assisted one-pot pyrolysis strategy from EDTA–Pt complex to N-doped graphene with isolated Pt single atomic sites (Pt-ISA/NG) with Pt loading up to 5.3 wt %. The X-ray absorption fine structure analysis and spherical aberration-correction electron microscopy demonstrate an atomic dispersion of single Pt species on graphene support and stabilized by nitrogen in Pt–N4 structure. The Pt-ISA/NG catalyst exhibits high catalytic activity and reusability for anti-Markovnikov hydrosilylation of various terminal alkenes with industrially relevant tertiary silanes under mild conditions. In hydrosilylation of 1-octene, the Pt-ISA/NG catalyst delivers an overall turnover frequency of 180 h–1, which is a 4-fold enhancement compared with commercial Pt/C.
+DA  - 2018/09/18/
+PY  - 2018
+DO  - 10.1021/acscatal.8b02624
+DP  - ACS Publications
+SP  - 10004
+EP  - 10011
+J2  - ACS Catal.
+UR  - https://doi.org/10.1021/acscatal.8b02624
+Y2  - 2018/10/22/14:36:43
+ER  - 
+
+TY  - JOUR
+TI  - Ti3C2Tx MXene Catalyzed Ethylbenzene Dehydrogenation: Active Sites and Mechanism Exploration from both Experimental and Theoretical Aspects
+AU  - Diao, Jiangyong
+AU  - Hu, Minmin
+AU  - Lian, Zan
+AU  - Li, Zhaojin
+AU  - Zhang, Hui
+AU  - Huang, Fei
+AU  - Li, Bo
+AU  - Wang, Xiaohui
+AU  - Su, Dang Sheng
+AU  - Liu, Hongyang
+T2  - ACS Catalysis
+AB  - Two-dimensional materials (such as graphene, MXenes) usually perform remarkably well as catalysts in comparison with their three-dimensional counterparts. In this work, Ti3AlC2-derived Ti3C2Tx MXene (T = O, OH, F) was prepared and employed in the direct dehydrogenation of ethylbenzene. A 92 μmol m–2 h–1 reactivity and a 40 h stability with almost no deactivation were observed, which is much better than those of the previously reported nanocarbon catalysts. The graphene-like layered structure and the C–Ti–O termination groups induced by the preparation process were thought to account for the good catalytic performance of Ti3C2Tx MXene from both experimental and computational perspectives. The discovery expands the application of two-dimensional MXenes and provides more choices in exploring high-activity catalysts for hydrocarbon dehydrogenation reactions.
+DA  - 2018/09/21/
+PY  - 2018
+DO  - 10.1021/acscatal.8b02002
+DP  - ACS Publications
+SP  - 10051
+EP  - 10057
+J2  - ACS Catal.
+ST  - Ti3C2Tx MXene Catalyzed Ethylbenzene Dehydrogenation
+UR  - https://doi.org/10.1021/acscatal.8b02002
+Y2  - 2018/10/24/00:46:15
+ER  - 
+
+TY  - JOUR
+TI  - Solvent Tunes the Selectivity of Hydrogenation Reaction over α-MoC Catalyst
+AU  - Deng, Yuchen
+AU  - Gao, Rui
+AU  - Lin, Lili
+AU  - Liu, Tong
+AU  - Wen, Xiao-Dong
+AU  - Wang, Shuai
+AU  - Ma, Ding
+T2  - Journal of the American Chemical Society
+AB  - Selective activation of chemical bonds in multifunctional oxygenates on solid catalysts is a crucial challenge for sustainable biomass upgrading. Molybdenum carbides and nitrides preferentially activate CO and C−OH bonds over CC and C−C bonds in liquid-phase hydrogenation of bioderived furfural, leading to highly selective formations of furfuryl alcohol (FA) and its subsequent hydrogenolysis product (2-methyl furan (2-MF)). We demonstrate that pure-phase α-MoC is more active than β-Mo2C and γ-Mo2N for catalyzing furfural hydrogenation, and the hydrogenation selectivity on these catalysts can be conveniently manipulated by alcohol solvents without signiﬁcant changes in reaction rates (e.g., > 90% yields of FA in methanol solvent and of 2-MF in 2-butanol solvent at 423 K). Combined experimental and theoretical assessments of these solvent eﬀects unveil that it is the hydrogen donating ability of the solvents that governs the hydrogenation rate of the reactants, while strong dissociative adsorption of the alcohol solvent on Mo-based catalysts results in surface decoration which controls the reaction selectivity via enforcing steric hindrance on the formation of relevant transient states. Such solventinduced surface modiﬁcation of Mo-based catalysts provides a compelling strategy for highly selective hydrodeoxygenation processes of biomass feedstocks.
+DA  - 2018/10/23/
+PY  - 2018
+DO  - 10.1021/jacs.8b09310
+DP  - Crossref
+LA  - en
+SN  - 0002-7863, 1520-5126
+UR  - http://pubs.acs.org/doi/10.1021/jacs.8b09310
+Y2  - 2018/10/25/00:45:21
+L1  - files/8896/Deng et al. - 2018 - Solvent Tunes the Selectivity of Hydrogenation Rea.pdf
+ER  - 
+
+TY  - JOUR
+TI  - Atomically Precise Strategy to a PtZn Alloy Nanocluster Catalyst for the Deep Dehydrogenation of n-Butane to 1,3-Butadiene
+AU  - Camacho-Bunquin, Jeffrey
+AU  - Ferrandon, Magali S.
+AU  - Sohn, Hyuntae
+AU  - Kropf, A. Jeremy
+AU  - Yang, Ce
+AU  - Wen, Jianguo
+AU  - Hackler, Ryan A.
+AU  - Liu, Cong
+AU  - Celik, Gokhan
+AU  - Marshall, Christopher L.
+AU  - Stair, Peter C.
+AU  - Delferro, Massimiliano
+T2  - ACS Catalysis
+AB  - The development of on-purpose 1,3-butadiene (BDE) technologies remains an active area in catalysis research, because of the importance of BDE in industrial polymer production. Here, we report on a nonoxidative dehydrogenation catalyst for the production of BDE prepared by atomically precise installation of platinum sites on a Zn-modified SiO2 support via atomic layer deposition (ALD). In situ reduction X-ray absorption spectroscopy (XAS), X-ray photoelectron spectroscopy (XPS), CO chemisorption, and high-angle annular dark-field (HAADF) scanning transmission electron microscopy (STEM) imaging of activated PtZn/SiO2, revealed the formation of a uniform, well-distributed subnanometer- to nanometer-sized PtZn (1.2 ± 0.3 nm) alloy as the active catalytic species.
+DA  - 2018/09/27/
+PY  - 2018
+DO  - 10.1021/acscatal.8b02794
+DP  - ACS Publications
+SP  - 10058
+EP  - 10063
+J2  - ACS Catal.
+UR  - https://doi.org/10.1021/acscatal.8b02794
+Y2  - 2018/10/26/01:41:16
+ER  - 
+
+TY  - JOUR
+TI  - A Monte Carlo study of temperature-programmed desorption from supported-metal catalysts
+AU  - McLeod, A S
+AU  - Gladden, L F
+T2  - Catalysis Letters
+AB  - The extent to which metal particle geometry and adsorbate spillover influence the temperature-programmed desorption spectra for the desorption of hydrogen from supported-metal catalysts has been studied by Monte Carlo simulation. By including a mechanism for adsorbate spillover and surface diffusion it is shown that spillover of the adsorbate onto the catalyst support can result in the differences observed experimentally between desorption spectra obtained from single crystals and supported-metal catalysts. An isosteric Arrhenius analysis of the TPD spectra has been used to demonstrate that, at low surface coverage, the activation energy characterising surface diffusion of adsorbates on the catalyst support can be obtained from the desorption spectrum.
+DA  - 1998///
+PY  - 1998
+DP  - Zotero
+VL  - 55
+SP  - 1
+EP  - 6
+LA  - en
+L1  - files/8900/McLeod and Gladden - A Monte Carlo study of temperature-programmed deso.pdf
+ER  - 
+
