@@ -2,54 +2,19 @@
 <html lang="en">
 
 <head>
+    <title>Literature</title>
     {% load static %}
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>2 Col Portfolio - Start Bootstrap Template</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
-
+    {% include "dj_literature/header.html" %}
     <!-- Custom styles for this template -->
-    <link href="{% static "css/2-col-portfolio.css" %}" rel="stylesheet">
-    <script type="text/babel" src="{% static "index.js" %}"></script>
-
+    <link href="{% static "css/index.css" %}" rel="stylesheet">
+    <script type="javascript" src="{% static "index.js" %}"></script>
 </head>
 
 <body>
 
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+{% include "dj_literature/top.html" %}
 <div id="root"></div>
 
 <!-- Page Content -->
@@ -168,16 +133,7 @@
 <!-- /.container -->
 
 <!-- Footer -->
-<footer class="py-5 bg-dark">
-    <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
-    </div>
-    <!-- /.container -->
-</footer>
-
-<!-- Bootstrap core JavaScript -->
-<script type="javascript" src="{% static "vendor/jquery/jquery.min.js" %}"></script>
-<script type="javascript" src="{% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
+{% include "dj_literature/footer.html" %}
 
 </body>
 
