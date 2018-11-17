@@ -19,3 +19,9 @@ Django website for manage literature and RSS Feed.
 <del>不想使用jQuery了。准备使用reactjs试一下。<del>
 还是得使用jQuery,对reactjs不熟.他应该是前后端分离的框架.使用babel转化浏览器一直给警告.
 尽量使用es6,尽量不适用jQuery
+
+# 功能列表
+1. 保存文献.ris文件,rss源.管理-删除,添加 form,修改,查.       对文献聚类/分类. note(todo)
+2. rss订阅,拉取.rss源管理.
+
+# url格式
