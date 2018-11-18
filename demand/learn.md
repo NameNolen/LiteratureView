@@ -25,3 +25,7 @@ TEMPLATES = [
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"/>
 ```
 
+#### rest-ful django api
+引入 `pip install djangorestframework` 依赖包.
+<del>测试 `pip install httpie` 包</del>.测试使用的ide自带的工具
+

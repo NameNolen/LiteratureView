@@ -24,4 +24,5 @@ Django website for manage literature and RSS Feed.
 1. 保存文献.ris文件,rss源.管理-删除,添加 form,修改,查.       对文献聚类/分类. note(todo)
 2. rss订阅,拉取.rss源管理.
 
-# url格式
+### rest-ful django api
+安装 `pip install djangorestframework` 依赖包.
