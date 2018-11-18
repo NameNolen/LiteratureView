@@ -29,3 +29,6 @@ TEMPLATES = [
 引入 `pip install djangorestframework` 依赖包.
 <del>测试 `pip install httpie` 包</del>.测试使用的ide自带的工具
 
+#### 交互式shell
+`python manage.py shell` 进入命令.`manage.py`是相对路径
+
