@@ -131,7 +131,7 @@ class TagRest(serializers.ModelSerializer):
         fields = ('name', 'tagtype', 'dateadded', 'datemodified')
 
 
-class ItemTag(serializers.ModelSerializer):
+class ItemTagRest(serializers.ModelSerializer):
     class Meta:
         model = Tag
         fields = ('item', 'tag')
