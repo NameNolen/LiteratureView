@@ -11,7 +11,7 @@ from .models import *
 class CreatorTypeRest(serializers.ModelSerializer):
     class Meta:
         model = CreatorType
-        fields = ('creatortype')
+        fields = '__all__'
 
 
 # class CreatorData(serializers.ModelSerializer):
@@ -30,14 +30,14 @@ class CreatorRest(serializers.ModelSerializer):
 class FieldRest(serializers.ModelSerializer):
     class Meta:
         model = Field
-        fields = ('fieldname')
+        fields = '__all__'
 
 
 # File model
 class FileTypeRest(serializers.ModelSerializer):
     class Meta:
         model = FileType
-        fields = ('filetype')
+        fields = '__all__'
 
 
 class FileTypeMimeTypeRest(serializers.ModelSerializer):
@@ -57,12 +57,14 @@ class ItemTypeFieldRest(serializers.ModelSerializer):
     class Meta:
         model = ItemTypeField
         fields = ('itemtype', 'field', 'orderindex')
+        depth = 2
 
 
 class ItemTypeCreatorTypeRest(serializers.ModelSerializer):
     class Meta:
         model = ItemTypeCreatorType
         fields = ('itemtype', 'creatortype', 'primaryfield')
+        depth = 2
 
 
 # class ItemDataValue(serializers.ModelSerializer):
@@ -80,13 +82,15 @@ class ItemRest(serializers.ModelSerializer):
 class ItemDataRest(serializers.ModelSerializer):
     class Meta:
         model = ItemData
-        fields = ('item', 'field', 'value')
+        fields = '__all__'
+        depth = 2
 
 
 class ItemCreatorRest(serializers.ModelSerializer):
     class Meta:
         model = ItemCreator
         fields = ('item', 'creator', 'creatortype', 'orderindex')
+        depth = 3
 
 
 class CollectionRest(serializers.ModelSerializer):
@@ -122,6 +126,7 @@ class ItemNoteRest(serializers.ModelSerializer):
     class Meta:
         model = ItemNote
         fields = ('title', 'note', 'item', 'sourceitem')
+        depth = 1
 
 
 # Tag model
@@ -133,5 +138,6 @@ class TagRest(serializers.ModelSerializer):
 
 class ItemTagRest(serializers.ModelSerializer):
     class Meta:
-        model = Tag
+        model = ItemTag
         fields = ('item', 'tag')
+        depth = 2

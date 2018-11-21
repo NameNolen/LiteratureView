@@ -1,36 +1,14 @@
-from django.http import HttpResponse, JsonResponse
-from django.views.decorators.csrf import csrf_exempt
-from rest_framework.parsers import JSONParser
-from rest_framework import generics
 from django.shortcuts import render
-from .models import *
+from rest_framework import generics
+
 from .rest_models import *
 
 
 # Create your views here.
-# todo 只是做了index。
+
 
 def index(request):
     return render(request, 'dj_literature/index.html')
-
-
-@csrf_exempt
-def item_list(request):
-    """
-    List all item.
-    """
-    if request.method == 'GET':
-        items = Item.objects.all()
-        serializer = ItemRest(items, many=True)
-        return JsonResponse(serializer.data, safe=False)
-
-    elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = ItemRest(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)
 
 
 class CollectionList(generics.ListCreateAPIView):
@@ -63,272 +41,111 @@ class TagDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = TagRest
 
 
+class CollectionItemList(generics.ListCreateAPIView):
+    queryset = CollectionItem.objects.all()
+    serializer_class = CollectionItemRest
 
 
-@csrf_exempt
-def collection_item_list(request):
-    """
-    List all item.
-    """
-    if request.method == 'GET':
-        collections = CollectionItem.objects.all()
-        serializer = CollectionItemRest(collections, many=True)
-        return JsonResponse(serializer.data, safe=False)
-
-    elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = CollectionItemRest(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)
+class CollectionItemDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = CollectionItem.objects.all()
+    serializer_class = CollectionItemRest
 
 
-@csrf_exempt
-def creator_type_list(request):
-    """
-    List all item.
-    """
-    if request.method == 'GET':
-        collections = CreatorType.objects.all()
-        serializer = CreatorTypeRest(collections, many=True)
-        return JsonResponse(serializer.data, safe=False)
-
-    elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = CreatorTypeRest(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)
+class ItemCreators(generics.ListCreateAPIView):
+    queryset = ItemCreator.objects.all()
+    serializer_class = ItemCreatorRest
 
 
-@csrf_exempt
-def creator_list(request):
-    """
-    List all item.
-    """
-    if request.method == 'GET':
-        collections = Creator.objects.all()
-        serializer = CreatorRest(collections, many=True)
-        return JsonResponse(serializer.data, safe=False)
-
-    elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = CreatorRest(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)
+class ItemCreatorDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = ItemCreator.objects.all()
+    serializer_class = ItemCreatorRest
 
 
-@csrf_exempt
-def field_list(request):
-    """
-    List all item.
-    """
-    if request.method == 'GET':
-        collections = Field.objects.all()
-        serializer = FieldRest(collections, many=True)
-        return JsonResponse(serializer.data, safe=False)
-
-    elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = FieldRest(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)
+class ItemTypeCreatorTypeList(generics.ListCreateAPIView):
+    queryset = ItemTypeCreatorType.objects.all()
+    serializer_class = ItemTypeCreatorTypeRest
 
 
-@csrf_exempt
-def file_type_list(request):
-    """
-    List all item.
-    """
-    if request.method == 'GET':
-        collections = FileType.objects.all()
-        serializer = FileTypeRest(collections, many=True)
-        return JsonResponse(serializer.data, safe=False)
-
-    elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = FileTypeRest(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)
+class ItemTypeCreatorTypeDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = ItemTypeCreatorType.objects.all()
+    serializer_class = ItemTypeCreatorTypeRest
 
 
-@csrf_exempt
-def file_type_mime_type_list(request):
-    """
-    List all item.
-    """
-    if request.method == 'GET':
-        collections = FileTypeMimeType.objects.all()
-        serializer = FileTypeMimeTypeRest(collections, many=True)
-        return JsonResponse(serializer.data, safe=False)
-
-    elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = FileTypeMimeTypeRest(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)
+class CreatorTypeList(generics.ListCreateAPIView):
+    queryset = CreatorType.objects.all()
+    serializer_class = CreatorTypeRest
 
 
-@csrf_exempt
-def item_type_list(request):
-    """
-    List all item.
-    """
-    if request.method == 'GET':
-        collections = ItemType.objects.all()
-        serializer = ItemTypeRest(collections, many=True)
-        return JsonResponse(serializer.data, safe=False)
-
-    elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = ItemTypeRest(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)
+class CreatorTypeDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = CreatorType.objects.all()
+    serializer_class = CreatorTypeRest
 
 
-@csrf_exempt
-def item_type_field_list(request):
-    """
-    List all item.
-    """
-    if request.method == 'GET':
-        collections = ItemTypeField.objects.all()
-        serializer = ItemTypeFieldRest(collections, many=True)
-        return JsonResponse(serializer.data, safe=False)
-
-    elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = ItemTypeFieldRest(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)
+class CreatorList(generics.ListCreateAPIView):
+    queryset = Creator.objects.all()
+    serializer_class = CreatorRest
 
 
-@csrf_exempt
-def item_type_creator_type_list(request):
-    """
-    List all item.
-    """
-    if request.method == 'GET':
-        collections = ItemTypeCreatorType.objects.all()
-        serializer = ItemTypeCreatorTypeRest(collections, many=True)
-        return JsonResponse(serializer.data, safe=False)
-
-    elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = ItemTypeCreatorTypeRest(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)
+class CreatorDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Creator.objects.all()
+    serializer_class = CreatorRest
 
 
-@csrf_exempt
-def item_data_list(request):
-    """
-    List all item.
-    """
-    if request.method == 'GET':
-        collections = ItemData.objects.all()
-        serializer = ItemDataRest(collections, many=True)
-        return JsonResponse(serializer.data, safe=False)
-
-    elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = ItemDataRest(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)
+class ItemTypeList(generics.ListCreateAPIView):
+    queryset = ItemType.objects.all()
+    serializer_class = ItemTypeRest
 
 
-@csrf_exempt
-def item_creator_list(request):
-    """
-    List all item.
-    """
-    if request.method == 'GET':
-        collections = ItemCreator.objects.all()
-        serializer = ItemCreatorRest(collections, many=True)
-        return JsonResponse(serializer.data, safe=False)
-
-    elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = ItemCreatorRest(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)
+class ItemTypeDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = ItemType.objects.all()
+    serializer_class = ItemTypeRest
 
 
-@csrf_exempt
-def deleted_item_list(request):
-    """
-    List all item.
-    """
-    if request.method == 'GET':
-        collections = DeletedItem.objects.all()
-        serializer = DeletedItemRest(collections, many=True)
-        return JsonResponse(serializer.data, safe=False)
-
-    elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = DeletedItemRest(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)
+class ItemDataList(generics.ListCreateAPIView):
+    queryset = ItemData.objects.all()
+    serializer_class = ItemTagRest
 
 
-@csrf_exempt
-def item_attachment_list(request):
-    """
-    List all item.
-    """
-    if request.method == 'GET':
-        collections = ItemAttachment.objects.all()
-        serializer = ItemAttachmentRest(collections, many=True)
-        return JsonResponse(serializer.data, safe=False)
-
-    elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = ItemAttachmentRest(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)
+class ItemDataDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = ItemData.objects.all()
+    serializer_class = ItemDataRest
 
 
-@csrf_exempt
-def item_note_list(request):
-    """
-    List all item.
-    """
-    if request.method == 'GET':
-        collections = ItemNote.objects.all()
-        serializer = ItemNoteRest(collections, many=True)
-        return JsonResponse(serializer.data, safe=False)
-
-    elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = ItemNoteRest(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)
+class ItemTagList(generics.ListCreateAPIView):
+    queryset = ItemTag.objects.all()
+    serializer_class = ItemTagRest
 
 
+class ItemTagDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = ItemTag.objects.all()
+    serializer_class = ItemTagRest
 
+
+class ItemTypeFieldList(generics.ListCreateAPIView):
+    queryset = ItemTypeField.objects.all()
+    serializer_class = ItemTypeFieldRest
+
+
+class ItemTypeFieldDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = ItemTypeField.objects.all()
+    serializer_class = ItemTypeFieldRest
+
+
+class FieldList(generics.ListCreateAPIView):
+    queryset = Field.objects.all()
+    serializer_class = FieldRest
+
+
+class FieldDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Field.objects.all()
+    serializer_class = FieldRest
+
+
+class ItemNoteList(generics.ListCreateAPIView):
+    queryset = ItemNote.objects.all()
+    serializer_class = ItemNoteRest
+
+
+class ItemNoteDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = ItemNote.objects.all()
+    serializer_class = ItemNoteRest
