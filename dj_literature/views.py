@@ -1,7 +1,7 @@
 from django.http import HttpResponse, JsonResponse
-from rest_framework.renderers import JSONRenderer
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
+from rest_framework import generics
 from django.shortcuts import render
 from .models import *
 from .rest_models import *
@@ -33,23 +33,36 @@ def item_list(request):
         return JsonResponse(serializer.errors, status=400)
 
 
-@csrf_exempt
-def collection_list(request):
-    """
-    List all item.
-    """
-    if request.method == 'GET':
-        collections = Collection.objects.all()
-        serializer = CollectionRest(collections, many=True)
-        return JsonResponse(serializer.data, safe=False)
+class CollectionList(generics.ListCreateAPIView):
+    queryset = Collection.objects.all()
+    serializer_class = CollectionRest
 
-    elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = CollectionRest(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)
+
+class CollectionDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Collection.objects.all()
+    serializer_class = CollectionRest
+
+
+class ItemList(generics.ListCreateAPIView):
+    queryset = Item.objects.all()
+    serializer_class = ItemRest
+
+
+class ItemDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Item.objects.all()
+    serializer_class = ItemRest
+
+
+class TagList(generics.ListCreateAPIView):
+    queryset = Tag.objects.all()
+    serializer_class = TagRest
+
+
+class TagDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Tag.objects.all()
+    serializer_class = TagRest
+
+
 
 
 @csrf_exempt
@@ -318,39 +331,4 @@ def item_note_list(request):
         return JsonResponse(serializer.errors, status=400)
 
 
-@csrf_exempt
-def tag_list(request):
-    """
-    List all item.
-    """
-    if request.method == 'GET':
-        collections = Tag.objects.all()
-        serializer = TagRest(collections, many=True)
-        return JsonResponse(serializer.data, safe=False)
 
-    elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = TagRest(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)
-
-
-@csrf_exempt
-def item_tag_list(request):
-    """
-    List all item.
-    """
-    if request.method == 'GET':
-        collections = ItemTag.objects.all()
-        serializer = ItemTagRest(collections, many=True)
-        return JsonResponse(serializer.data, safe=False)
-
-    elif request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = ItemTagRest(data=data)
-        if serializer.is_valid():
-            serializer.save()
-            return JsonResponse(serializer.data, status=201)
-        return JsonResponse(serializer.errors, status=400)

@@ -5,9 +5,15 @@ from . import views
 # todo 还有好多没有做
 urlpatterns = [
     path('', views.index, name='index'),
-    path('items', views.item_list, name='item_list'),
-    path('collections', views.collection_list, name='collection_list'),
-    path('item_datas', views.item_data_list, name='item_data_list'),
+    path('collections/', views.CollectionList.as_view(), name='collection_list'),
+    path('collections/<int:pk>', views.CollectionDetail.as_view(), name='collection_detail'),
+
+    path('items/', views.ItemList.as_view(), name='item_list'),
+    path('items/<int:pk>', views.ItemDetail.as_view(), name='item_detail'),
+
+    path('tags/', views.TagList.as_view(), name='tag_list'),
+    path('tags/<int:pk>', views.TagDetail.as_view(),name='tag_detail'),
+    # path('item_tags', views.TagDetail.as_view(), name='item_tag_list'),
 
     # 这个作为主要的查询.所有的item有一个collection,如果没有明确指定,则为root
     path('collection_items', views.collection_item_list, name='collection_item_list'),
@@ -24,6 +30,5 @@ urlpatterns = [
     path('deleted_items', views.deleted_item_list, name='deleted_item_list'),
     path('item_attachments', views.item_attachment_list, name='item_attachment_list'),
     path('item_notes', views.item_note_list, name='item_note_list'),
-    path('tags', views.tag_list, name='tag_list'),
-    path('item_tags', views.item_tag_list, name='item_tag_list'),
+
 ]
