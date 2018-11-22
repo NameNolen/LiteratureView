@@ -44,6 +44,7 @@ class FileTypeMimeTypeRest(serializers.ModelSerializer):
     class Meta:
         model = FileTypeMimeType
         fields = ('filetype', 'mimetype')
+        depth = 2
 
 
 # Item model
@@ -114,12 +115,14 @@ class DeletedItemRest(serializers.ModelSerializer):
     class Meta:
         model = DeletedItem
         fields = ('item', 'datedeleted')
+        depth = 2
 
 
 class ItemAttachmentRest(serializers.ModelSerializer):
     class Meta:
         model = ItemAttachment
         fields = ('item', 'sourceitem', 'attachment', 'mimetype')
+        depth = 2
 
 
 class ItemNoteRest(serializers.ModelSerializer):

@@ -50,9 +50,15 @@ urlpatterns = [
     path('item_notes/', views.ItemNoteList.as_view(), name='item_note_list'),
     path('item_notes/<int:pk>', views.ItemNoteDetail.as_view(), name='item_note_detail'),
 
-    # path('file_types', views.file_type_list, name='file_type_list'),
-    # path('file_type_mime_types', views.file_type_mime_type_list, name='file_type_mime_type_list'),
+    path('file_types', views.FileTypeList.as_view(), name='file_type_list'),
+    path('file_types/<int:pk>', views.FileTypeDetail.as_view(), name='file_type_detail'),
 
-    # path('item_attachments', views.item_attachment_list, name='item_attachment_list'),
-    # path('deleted_items', views.deleted_item_list, name='deleted_item_list'),
+    path('file_type_mime_types/', views.FileTypeMimeTypeList.as_view(), name='file_type_mime_type_list'),
+    path('file_type_mime_types/<int:pk>', views.FileTypeMimeTypeDetail.as_view(), name='file_type_mime_type_detail'),
+
+    path('item_attachments/', views.ItemAttachmentList.as_view(), name='item_attachment_list'),
+    path('item_attachments/<int:pk>', views.ItemAttachmentDetail.as_view(), name='item_attachment_detail'),
+
+    path('deleted_items/', views.DeletedItemList.as_view(), name='deleted_item_list'),
+    path('deleted_items/<int:pk>', views.DeletedItemDetail.as_view(), name='deleted_item_detail'),
 ]

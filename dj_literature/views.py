@@ -149,3 +149,43 @@ class ItemNoteList(generics.ListCreateAPIView):
 class ItemNoteDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = ItemNote.objects.all()
     serializer_class = ItemNoteRest
+
+
+class FileTypeList(generics.ListCreateAPIView):
+    queryset = FileType.objects.all()
+    serializer_class = FileTypeRest
+
+
+class FileTypeDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = FileType.objects.all()
+    serializer_class = FileTypeRest
+
+
+class FileTypeMimeTypeList(generics.ListCreateAPIView):
+    queryset = FileTypeMimeType.objects.all()
+    serializer_class = FileTypeMimeTypeRest
+
+
+class FileTypeMimeTypeDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = FileTypeMimeType.objects.all()
+    serializer_class = FileTypeMimeTypeRest
+
+
+class ItemAttachmentList(generics.ListCreateAPIView):
+    queryset = ItemAttachment.objects.all()
+    serializer_class = ItemAttachmentRest
+
+
+class ItemAttachmentDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = ItemAttachment.objects.all()
+    serializer_class = ItemAttachmentRest
+
+
+class DeletedItemList(generics.ListCreateAPIView):
+    queryset = DeletedItem.objects.all()
+    serializer_class = DeletedItemRest
+
+
+class DeletedItemDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = DeletedItem.objects.all()
+    serializer_class = DeletedItemRest
