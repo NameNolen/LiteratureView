@@ -122,5 +122,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "dj_literature/templates/dj_literature/static"),
+    # os.path.join(BASE_DIR, "../dj_literature/templates/dj_literature"),
+    'D:\\github\\LiteratureView\\dj_literature\\templates\\dj_literature\\static',
 ]
