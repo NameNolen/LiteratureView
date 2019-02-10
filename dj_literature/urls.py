@@ -14,7 +14,7 @@ urlpatterns = [
     path('tags/', views.TagList.as_view(), name='tag_list'),
     path('tags/<int:pk>', views.TagDetail.as_view(),name='tag_detail'),
 
-    path('item_tags', views.ItemTagList.as_view(), name='item_tag_list'),
+    path('item_tags/', views.ItemTagList.as_view(), name='item_tag_list'),
     path('item_tags/<int:pk>', views.ItemTagDetail.as_view(), name='item_tag_detail'),
 
     # 这个作为主要的查询.所有的item有一个collection,如果没有明确指定,则为root
@@ -31,7 +31,7 @@ urlpatterns = [
     path('item_type_creator_types/', views.ItemTypeCreatorTypeList.as_view(), name='item_type_creator_type_list'),
     path('item_type_creator_types/<int:pk>', views.ItemTypeCreatorTypeDetail.as_view(), name='item_type_creator_type_Detail'),
 
-    path('item_types', views.ItemTypeList.as_view(), name='item_type_list'),
+    path('item_types/', views.ItemTypeList.as_view(), name='item_type_list'),
     path('item_types/<int:pk>', views.ItemTypeDetail.as_view(), name='item_type_detail'),
 
     path('creator_types/', views.CreatorTypeList.as_view(), name='creator_type_list'),
@@ -50,7 +50,7 @@ urlpatterns = [
     path('item_notes/', views.ItemNoteList.as_view(), name='item_note_list'),
     path('item_notes/<int:pk>', views.ItemNoteDetail.as_view(), name='item_note_detail'),
 
-    path('file_types', views.FileTypeList.as_view(), name='file_type_list'),
+    path('file_types/', views.FileTypeList.as_view(), name='file_type_list'),
     path('file_types/<int:pk>', views.FileTypeDetail.as_view(), name='file_type_detail'),
 
     path('file_type_mime_types/', views.FileTypeMimeTypeList.as_view(), name='file_type_mime_type_list'),
