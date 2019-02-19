@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
 from .rest_models import *
 
@@ -189,3 +191,11 @@ class DeletedItemList(generics.ListCreateAPIView):
 class DeletedItemDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = DeletedItem.objects.all()
     serializer_class = DeletedItemRest
+
+
+@api_view(['GET'])
+def get_menus(request):
+    """
+    总菜单
+    """
+    return Response(["Dashboard", "All articles", "Collection", "Tags"])
