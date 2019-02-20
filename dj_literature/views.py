@@ -198,4 +198,12 @@ def get_menus(request):
     """
     总菜单
     """
-    return Response(["Dashboard", "All articles", "Collection", "Tags"])
+    return Response(["Dashboard", "Collections", "Tags"])
+
+
+@api_view(['GET'])
+def get_dashboard(request):
+    """
+    总菜单
+    """
+    return Response(["All articles", "Unread"])

@@ -63,4 +63,5 @@ urlpatterns = [
     path('deleted_items/<int:pk>', views.DeletedItemDetail.as_view(), name='deleted_item_detail'),
 
     path('getMenus/', views.get_menus, name='get_menus'),
+    path('dashboard/', views.get_dashboard, name='get_dashboard'),
 ]
