@@ -2,6 +2,7 @@ from django.shortcuts import render
 from rest_framework import generics
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from django.http import JsonResponse
 
 from .rest_models import *
 
@@ -207,3 +208,16 @@ def get_dashboard(request):
     总菜单
     """
     return Response([{"name": "All articles", "key": "all"}, {"name": "Unread", "Key": "unread"}])
+
+
+@api_view(['GET'])
+def get_all_articles(request):
+    """
+    所有文章
+    """
+    result = Item.objects.all()
+    serializer = ItemRest(result, many=True)
+    print(serializer)
+    print('\n123123123')
+    print(serializer.data)
+    return JsonResponse(serializer.data)
