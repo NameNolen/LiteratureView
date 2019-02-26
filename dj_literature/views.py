@@ -220,4 +220,4 @@ def get_all_articles(request):
     print(serializer)
     print('\n123123123')
     print(serializer.data)
-    return JsonResponse(serializer.data)
+    return JsonResponse(serializer.data, safe=False)
