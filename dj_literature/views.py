@@ -221,3 +221,16 @@ def get_all_articles(request):
     print('\n123123123')
     print(serializer.data)
     return JsonResponse(serializer.data, safe=False)
+
+
+@api_view(['GET'])
+def get_articles_by_tag_name(request):
+    """
+    所有文章
+    """
+    result = Item.objects.all()
+    serializer = ItemRest(result, many=True)
+    print(serializer)
+    print('\n123123123')
+    print(serializer.data)
+    return JsonResponse(serializer.data, safe=False)

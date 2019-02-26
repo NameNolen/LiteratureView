@@ -65,4 +65,5 @@ urlpatterns = [
     path('menus/', views.get_menus, name='get_menus'),
     path('dashboard/', views.get_dashboard, name='get_dashboard'),
     path('allArticles/', views.get_all_articles, name='get_all_articles'),
+    path('tags/<string:tagName>', views.get_articles_by_tag_name, name='get_articles_by_tag_name'),
 ]
