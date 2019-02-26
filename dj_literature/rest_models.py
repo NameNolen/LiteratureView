@@ -100,7 +100,7 @@ class CollectionRest(serializers.ModelSerializer):
 
     class Meta:
         model = Collection
-        fields = ('collectionname', 'parentcollection', 'dateadded', 'datemodified', 'key')
+        fields = ('collectionname', 'parentcollection', 'dateadded', 'datemodified', 'key','id')
         depth = 2
 
 

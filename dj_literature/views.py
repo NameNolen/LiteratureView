@@ -224,13 +224,35 @@ def get_all_articles(request):
 
 
 @api_view(['GET'])
-def get_articles_by_tag_name(request):
+def get_articles_by_tag_name(request, tag_name):
     """
-    所有文章
+    所有tag下的文章
     """
-    result = Item.objects.all()
-    serializer = ItemRest(result, many=True)
-    print(serializer)
-    print('\n123123123')
-    print(serializer.data)
+    item_tags = []
+    items = []
+    tags = Tag.objects.filter(name=tag_name)
+    for tag in tags:
+        item_tags += list(ItemTag.objects.filter(tag=tag.id))
+    print(item_tags)
+    for item_tag in item_tags:
+        print(item_tag)
+        items += list(Item.objects.filter(id=item_tag.item_id))
+    serializer = ItemRest(items, many=True)
     return JsonResponse(serializer.data, safe=False)
+
+
+@api_view(['GET'])
+def get_articles_by_collection_name(request, collectionName):
+    """
+    所有collectionname下的文章
+    """
+    items = []
+    parent = list(Collection.objects.filter(collectionname=collectionName))[0]
+    collections = list(Collection.objects.filter(parentcollection=parent.id))
+    collection_items = list(CollectionItem.objects.filter(collection=parent.id))
+    for collection_item in collection_items:
+        items += list(Item.objects.filter(id=collection_item.item_id))
+    item_serializer = ItemRest(items, many=True)
+    collection_serializer = CollectionRest(collections, many=True)
+
+    return JsonResponse(item_serializer.data, safe=False)
