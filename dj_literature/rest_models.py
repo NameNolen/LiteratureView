@@ -24,7 +24,7 @@ class CreatorTypeRest(serializers.ModelSerializer):
 class CreatorRest(serializers.ModelSerializer):
     class Meta:
         model = Creator
-        fields = ('firstname', 'lastname', 'dateadded', 'datemodified')
+        fields = '__all__'
 
 
 class FieldRest(serializers.ModelSerializer):
@@ -43,7 +43,7 @@ class FileTypeRest(serializers.ModelSerializer):
 class FileTypeMimeTypeRest(serializers.ModelSerializer):
     class Meta:
         model = FileTypeMimeType
-        fields = ('filetype', 'mimetype')
+        fields = '__all__'
         depth = 2
 
 
@@ -51,20 +51,20 @@ class FileTypeMimeTypeRest(serializers.ModelSerializer):
 class ItemTypeRest(serializers.ModelSerializer):
     class Meta:
         model = ItemType
-        fields = ('typename', 'display')
+        fields = '__all__'
 
 
 class ItemTypeFieldRest(serializers.ModelSerializer):
     class Meta:
         model = ItemTypeField
-        fields = ('itemtype', 'field', 'orderindex')
+        fields = '__all__'
         depth = 2
 
 
 class ItemTypeCreatorTypeRest(serializers.ModelSerializer):
     class Meta:
         model = ItemTypeCreatorType
-        fields = ('itemtype', 'creatortype', 'primaryfield')
+        fields = '__all__'
         depth = 2
 
 
@@ -77,7 +77,7 @@ class ItemRest(serializers.ModelSerializer):
 
     class Meta:
         model = Item
-        fields = ('itemtype', 'dateadded', 'datemodified', 'key')
+        fields = '__all__'
 
 
 class ItemDataRest(serializers.ModelSerializer):
@@ -90,7 +90,7 @@ class ItemDataRest(serializers.ModelSerializer):
 class ItemCreatorRest(serializers.ModelSerializer):
     class Meta:
         model = ItemCreator
-        fields = ('item', 'creator', 'creatortype', 'orderindex')
+        fields = '__all__'
         depth = 3
 
 
@@ -100,35 +100,35 @@ class CollectionRest(serializers.ModelSerializer):
 
     class Meta:
         model = Collection
-        fields = ('collectionname', 'parentcollection', 'dateadded', 'datemodified', 'key','id')
+        fields = '__all__'
         depth = 2
 
 
 class CollectionItemRest(serializers.ModelSerializer):
     class Meta:
         model = CollectionItem
-        fields = ('collection', 'item', 'orderindex')
+        fields = '__all__'
         depth=2
 
 
 class DeletedItemRest(serializers.ModelSerializer):
     class Meta:
         model = DeletedItem
-        fields = ('item', 'datedeleted')
+        fields = '__all__'
         depth = 2
 
 
 class ItemAttachmentRest(serializers.ModelSerializer):
     class Meta:
         model = ItemAttachment
-        fields = ('item', 'sourceitem', 'attachment', 'mimetype')
+        fields = '__all__'
         depth = 2
 
 
 class ItemNoteRest(serializers.ModelSerializer):
     class Meta:
         model = ItemNote
-        fields = ('title', 'note', 'item', 'sourceitem')
+        fields = '__all__'
         depth = 1
 
 
@@ -136,11 +136,11 @@ class ItemNoteRest(serializers.ModelSerializer):
 class TagRest(serializers.ModelSerializer):
     class Meta:
         model = Tag
-        fields = ('name', 'tagtype', 'dateadded', 'datemodified')
+        fields = '__all__'
 
 
 class ItemTagRest(serializers.ModelSerializer):
     class Meta:
         model = ItemTag
-        fields = ('item', 'tag')
+        fields = '__all__'
         depth = 2

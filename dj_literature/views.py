@@ -256,3 +256,20 @@ def get_articles_by_collection_name(request, collectionName):
     collection_serializer = CollectionRest(collections, many=True)
 
     return JsonResponse(item_serializer.data, safe=False)
+
+
+@api_view(['GET'])
+def get_tags_4_item(request, id):
+    """
+    所有collectionname下的文章
+    """
+    item_tags = list(ItemTag.objects.filter(item=id))
+    print(item_tags)
+    tags = []
+    for item_tag in item_tags:
+        tags += list(Tag.objects.filter(id=item_tag.tag_id))
+
+    print(tags)
+    serializer = TagRest(tags, many=True)
+    print(serializer.data)
+    return JsonResponse(serializer.data, safe=False)
