@@ -32,3 +32,7 @@ TEMPLATES = [
 #### 交互式shell
 `python manage.py shell` 进入命令.`manage.py`是相对路径
 
+#### 进入conda环境
+`` 进入conda环境
+
+
