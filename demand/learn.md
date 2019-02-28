@@ -32,7 +32,13 @@ TEMPLATES = [
 #### 交互式shell
 `python manage.py shell` 进入命令.`manage.py`是相对路径
 
+#### conda环境失效
+添加conda的环境变量到path中
+
+#### conda 查看环境
+`conda info --envs`
 #### 进入conda环境
 `` 进入conda环境
-
+#### conda 复制环境
+`conda create -n dj --clone base`
 
