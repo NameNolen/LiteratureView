@@ -8,7 +8,7 @@
 ]'''
 import random,string,re
 KEYLENGTH=8
-randomkey = lambda:''.join(random.choice(string.uppercase + string.digits) for i in xrange(KEYLENGTH))
+randomkey = lambda:''.join(random.choice(string.uppercase + string.digits) for i in range(KEYLENGTH))
 safepath = lambda a:re.sub('[^\w\-_\. ]', '_', a)
 
 # mapping from zotero
@@ -51,7 +51,7 @@ TYPE_OF_REFERENCE_MAPPING = {
     "INPR": "manuscript" ,
     "JFULL": "journalArticle",
     "JOUR": "journalArticle" ,
-    "LEGAL": "case", #is this what they mean? 
+    "LEGAL": "case", #is this what they mean?
     "MANSCPT": "manuscript",
     "MAP": "map" ,
     "MGZN": "magazineArticle",
@@ -411,7 +411,7 @@ def getfieldtype(entry):
         fieldtype = sf[0]
         field = sf[1]
     else:
-        msg = 'Unknown Field Type!' 
+        msg = 'Unknown Field Type!'
         return False,msg
     return True,(fieldtype,field)
 
