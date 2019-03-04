@@ -164,15 +164,8 @@ def readris(bibliography_file, wok=False):
 
 
 
-def importris(risfile):
-    with open(risfile, 'r') as bibliography_file:
-        entries = readris(bibliography_file)
-    return list(entries)
 
 
-if  __name__ == "__main__":
-    ris_list = importris(ris_path)
-    print("done")
 
 
 '''LIST_TYPE_TAGS = [
@@ -519,6 +512,7 @@ def getfield(tag,itemtype=None):
         msg = 'No field type is found!'
         raise IOError(msg)
 
+
 def getfieldtype(entry):
     # whether field or creator
     sf = entry.split('/')
@@ -538,3 +532,12 @@ def getfieldtype(entry):
 #Parse WOK and Refman's RIS files
 
 
+def importris(risfile):
+    with open(risfile, 'r') as bibliography_file:
+        entries = readris(bibliography_file)
+    return list(entries)
+
+
+if  __name__ == "__main__":
+    ris_list = importris(ris_path)
+    print("done")
