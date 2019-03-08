@@ -493,15 +493,15 @@ def getpersonname(tom):
 
 def getfield(tag, itemtype=None):
     value = fieldMap[tag]
-    print('type(value)', value)
+
     try:
         field = value['__default']
     except:
         field = None
     if type(value) == dict:
         # search itemtype
-        typeview = value.viewvalues()
-        fieldview = value.viewkeys()
+        typeview = value.values()
+        fieldview = value.keys()
         # attribute default value for field
         if (not itemtype) and (not field):
             msg = 'Neither field nor default value is found!'
