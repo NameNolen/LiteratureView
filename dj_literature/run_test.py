@@ -2,7 +2,6 @@ import random
 import re
 import string
 
-ris_path = 'D:\\gitspace\\LiteratureView\\tests\\Exported_Items\\Exported_Items.ris'
 
 woktag = "^[A-Z][A-Z0-9] |^ER$|^EF$"
 ristag = "^[A-Z][A-Z0-9]  - "
@@ -494,6 +493,7 @@ def getpersonname(tom):
 
 def getfield(tag, itemtype=None):
     value = fieldMap[tag]
+    print('type(value)', value)
     try:
         field = value['__default']
     except:
@@ -545,11 +545,14 @@ def getfieldtype(entry):
 
 
 def importris(risfile):
-    with open(risfile, 'r') as bibliography_file:
-        entries = readris(bibliography_file)
+    bibliography_file = open(ris_path, 'r', encoding='UTF-8')
+    entries = readris(bibliography_file)
     return list(entries)
 
 
 if __name__ == "__main__":
+    # ris_path = 'D:\\gitspace\\LiteratureView\\tests\\Exported_Items\\Exported_Items.ris'
+    ris_path = 'D:\\github\\LiteratureView\\tests\\Exported_Items\\Exported_Items.ris'
     ris_list = importris(ris_path)
+    print(ris_list)
     print("done")
