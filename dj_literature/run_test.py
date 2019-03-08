@@ -545,7 +545,7 @@ def getfieldtype(entry):
 
 
 def importris(risfile):
-    bibliography_file = open(ris_path, 'r', encoding='UTF-8')
+    bibliography_file = open(risfile, 'r', encoding='UTF-8')
     entries = readris(bibliography_file)
     return list(entries)
 

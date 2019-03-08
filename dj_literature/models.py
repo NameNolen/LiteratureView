@@ -113,8 +113,8 @@ def insert_itemnote(item, note):
 
 
 def importris(risfile):
-    with open(risfile, 'r') as bibliography_file:
-        entries = readris(bibliography_file)
+    bibliography_file = open(risfile, 'r', encoding='UTF-8')
+    entries = readris(bibliography_file)
     return list(entries)
 
 

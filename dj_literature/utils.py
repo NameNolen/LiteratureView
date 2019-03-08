@@ -378,8 +378,8 @@ def getfield(tag,itemtype=None):
         field = None
     if type(value)==dict:
         # search itemtype
-        typeview = value.viewvalues()
-        fieldview = value.viewkeys()
+        typeview = value.values()
+        fieldview = value.keys()
         # attribute default value for field
         if (not itemtype) and (not field):
             msg = 'Neither field nor default value is found!'
