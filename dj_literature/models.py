@@ -126,9 +126,12 @@ def insertitem(entries):
 
     for entry in entries:
         # get itemtype
-        itemtype = ItemType.objects.get(typename=entry.pop('itemtype'))
+        type_name = entry.pop('itemtype')
+        itemtype = ItemType.objects.get(typename=type_name)
+        print('itemType', itemtype)
         # item = insert_Item(itemtype,key)
         item = Item(itemtype=itemtype, key=randomkey())
+        print("item.itemtype", item.itemtype)
         item.save()
         for k in entry:
             isok, result = getfieldtype(k)

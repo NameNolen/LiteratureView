@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework import generics
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 
 from .rest_models import *
 
@@ -273,3 +273,14 @@ def get_tags_4_item(request, id):
     serializer = TagRest(tags, many=True)
     print(serializer.data)
     return JsonResponse(serializer.data, safe=False)
+
+
+@api_view(['GET'])
+def url_test(request):
+    """
+    测试ris导入
+    """
+    risfile = "D:\\github\\LiteratureView\\tests\\Exported_Items\\Exported_Items.ris"
+    entries = importris(risfile)
+    insertitem(entries)
+    return HttpResponse("Hello, world. You're at the polls index.")

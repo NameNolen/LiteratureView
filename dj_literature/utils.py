@@ -8,7 +8,7 @@
 ]'''
 import random,string,re
 KEYLENGTH=8
-randomkey = lambda:''.join(random.choice(string.uppercase + string.digits) for i in range(KEYLENGTH))
+randomkey = lambda:''.join(random.choice(string.ascii_uppercase + string.digits) for i in range(KEYLENGTH))
 safepath = lambda a:re.sub('[^\w\-_\. ]', '_', a)
 
 # mapping from zotero

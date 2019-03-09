@@ -66,6 +66,8 @@ urlpatterns = [
     path('dashboard/', views.get_dashboard, name='get_dashboard'),
     path('allArticles/', views.get_all_articles, name='get_all_articles'),
     path('tags/<str:tag_name>/', views.get_articles_by_tag_name, name='get_articles_by_tag_name'),
-    path('collectionList/<str:collectionName>/', views.get_articles_by_collection_name, name='get_articles_by_collection_name'),
+    path('collectionList/<str:collectionName>/', views.get_articles_by_collection_name,
+         name='get_articles_by_collection_name'),
     path('tags4item/<int:id>/', views.get_tags_4_item, name='get_tags_4_item'),
+    path('test', views.url_test, name='test'),
 ]
