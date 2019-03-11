@@ -280,7 +280,8 @@ def url_test(request):
     """
     测试ris导入
     """
-    risfile = "D:\\github\\LiteratureView\\tests\\Exported_Items\\Exported_Items.ris"
+    # risfile = "D:\\github\\LiteratureView\\tests\\Exported_Items\\Exported_Items.ris"
+    risfile = "D:\\gitspace\\LiteratureView\\tests\\Exported_Items\\Exported_Items.ris"
     entries = importris(risfile)
     insertitem(entries)
     return HttpResponse("Hello, world. You're at the polls index.")
