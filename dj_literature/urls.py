@@ -29,7 +29,8 @@ urlpatterns = [
     path('item_creators/<int:pk>', views.ItemCreatorDetail.as_view(), name='item_creator_detail'),
 
     path('item_type_creator_types/', views.ItemTypeCreatorTypeList.as_view(), name='item_type_creator_type_list'),
-    path('item_type_creator_types/<int:pk>', views.ItemTypeCreatorTypeDetail.as_view(), name='item_type_creator_type_Detail'),
+    path('item_type_creator_types/<int:pk>', views.ItemTypeCreatorTypeDetail.as_view(),
+         name='item_type_creator_type_Detail'),
 
     path('item_types/', views.ItemTypeList.as_view(), name='item_type_list'),
     path('item_types/<int:pk>', views.ItemTypeDetail.as_view(), name='item_type_detail'),

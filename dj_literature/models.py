@@ -15,14 +15,18 @@ def insert_itemdata(item, fieldname, itemtype, value):
     try:
         field = Field.objects.get(fieldname=fieldname)
     except:
-        msg = 'Error: Can\'t get field ' + fieldname
-        return False, msg
+        field = Field(fieldname=fieldname)
+        field.save()
+        # msg = 'Error: Can\'t get field ' + fieldname
+        # return False, msg
     # validate_ItemTypeField(itemtype,field)
     itemtypefield = ItemTypeField.objects.filter(field=field, itemtype=itemtype)
     if not itemtypefield:
-        msg = 'Error: ItemType %d:%s don\'t match field %d:%s' % (
-        itemtype.id, itemtype.typename, field.id, field.fieldname)
-        return False, msg
+        itemtypefield_save = ItemTypeField(field=field, itemtype=itemtype, orderindex=1)
+        itemtypefield_save.save()
+        # msg = 'Error: ItemType %d:%s don\'t match field %d:%s' % (
+        # itemtype.id, itemtype.typename, field.id, field.fieldname)
+        # return False, msg
     # insert_ItemData(item,field)
     for v in value:
         itemdata = ItemData(field=field, item=item, value=v)
@@ -43,20 +47,26 @@ def insert_itemtag(item, taglist, tagtype=1):
 
 
 def insert_creator(fieldname, item, itemtype, value):
-    creatortype = CreatorType.objects.get(creatortype=fieldname)
+    try:
+        creatortype = CreatorType.objects.get(creatortype=fieldname)
+    except:
+        creatortype = CreatorType(creatortype=fieldname)
+        creatortype.save()
     # validate_ItemTypeCreatorType(itemtype,creatortype)
     itemtypecreatortype = ItemTypeCreatorType.objects.filter(creatortype=creatortype, itemtype=itemtype)
     if not itemtypecreatortype:
-        msg = 'Error: ItemType %d:%s don\'t match CreatorType %d:%s' % (
-        itemtype.id, itemtype, creatortype.creatortype, creatortype.id)
-        return False, msg
+        itemtypecreatortype = ItemTypeCreatorType(creatortype=creatortype, itemtype=itemtype, primaryfield=1)
+        itemtypecreatortype.save()
+        # msg = 'Error: ItemType %d:%s don\'t match CreatorType %d:%s' % (
+        # itemtype.id, itemtype, creatortype.creatortype, creatortype.id)
+        # return False, msg
     order = 0
     for person in value:
         if not getpersonname(person)[0]:
             msg = getpersonname(person)[1]
             return False, msg
         lastname, firstname = getpersonname(person)[1]
-        # try to find exsist creator 
+        # try to find exsist creator
         creator = Creator.objects.filter(lastname=lastname, firstname=firstname)
         if not creator:
             creator = Creator(lastname=lastname, firstname=firstname)
@@ -74,7 +84,11 @@ def insert_creator(fieldname, item, itemtype, value):
 
 
 def insert_attachment(fieldname, item, filepath):
-    itemtype = ItemType.objects.get(typename='attachment')
+    try:
+        itemtype = ItemType.objects.get(typename='attachment')
+    except:
+        itemtype = ItemType(typename='attachment', display='displayName')
+        itemtype.save()
     sourceitem = Item(itemtype=itemtype, key=randomkey())
     sourceitem.save()
     import django.core.files
@@ -94,7 +108,11 @@ def insert_attachment(fieldname, item, filepath):
 
 def insert_itemnote(item, note):
     for inote in note:
-        itemtype = ItemType.objects.get(typename='note')
+        try:
+            itemtype = ItemType.objects.get(typename='note')
+        except:
+            itemtype = ItemType(typename='note', display='display')
+            itemtype.save()
         sourceitem = Item(itemtype=itemtype, key=randomkey())
         sourceitem.save()
         soup = BeautifulSoup(inote, 'lxml')
@@ -127,11 +145,14 @@ def insertitem(entries):
     for entry in entries:
         # get itemtype
         type_name = entry.pop('itemtype')
-        itemtype = ItemType.objects.get(typename=type_name)
-        print('itemType', itemtype)
+        try:
+            itemtype = ItemType.objects.get(typename=type_name, display=1)
+        except:
+            itemtype = ItemType(typename=type_name, display=1)
+            itemtype.save()
         # item = insert_Item(itemtype,key)
         item = Item(itemtype=itemtype, key=randomkey())
-        print("item.itemtype", item.itemtype)
+
         item.save()
         for k in entry:
             isok, result = getfieldtype(k)
@@ -195,6 +216,7 @@ def insertitem(entries):
         successentry.append(item)
     msg.append('Import Item from RIS File, Total Item Number: ' + str(totalitem))
     msg.append('Error Import Number: ' + str(len(problementry)))
+    print('msg', msg, '\nsuccessentry', successentry, '\nproblementry', problementry)
     return msg, successentry, problementry
 
 
