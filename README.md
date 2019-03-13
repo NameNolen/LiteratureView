@@ -12,10 +12,13 @@ Django website for manage literature and RSS Feed.
 
 # index theme
 
-不确定使用什么主题，在[bootstrap](https://startbootstrap.com/template-overviews/2-col-portfolio/)上选的这个简单的
+<del>不确定使用什么主题，在[bootstrap](https://startbootstrap.com/template-overviews/2-col-portfolio/)上选的这个简单的</del>
+
+主题就用自己做的了，参照[inoreader](https://www.inoreader.com)
 
 # 前端的框架
 
-<del>不想使用jQuery了。准备使用reactjs试一下。<del>
+<del>不想使用jQuery了。准备使用reactjs试一下。
 还是得使用jQuery,对reactjs不熟.他应该是前后端分离的框架.使用babel转化浏览器一直给警告.
-尽量使用es6,尽量不适用jQuery
+尽量使用es6,尽量不适用jQuery</del>
+正式开始使用react和相关组件
