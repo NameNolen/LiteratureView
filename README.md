@@ -12,7 +12,7 @@ Django website for manage literature and RSS Feed.
 
 # index theme
 
-<del>不确定使用什么主题，在[bootstrap](https://startbootstrap.com/template-overviews/2-col-portfolio/)上选的这个简单的<del>
+<del>不确定使用什么主题，在[bootstrap](https://startbootstrap.com/template-overviews/2-col-portfolio/)上选的这个简单的</del>
 自己画ui
 
 # 前端的框架

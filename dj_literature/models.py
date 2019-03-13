@@ -1,7 +1,11 @@
-from django.db import models
-from dj_literature.utils import *
-import os, mimetypes, time
+import mimetypes
+import os
+import time
+
 from bs4 import BeautifulSoup
+from django.db import models
+
+from dj_literature.utils import *
 
 """
 ## TODO:
