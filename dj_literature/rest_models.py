@@ -84,7 +84,6 @@ class ItemDataRest(serializers.ModelSerializer):
     class Meta:
         model = ItemData
         fields = '__all__'
-        depth = 2
 
 
 class ItemCreatorRest(serializers.ModelSerializer):

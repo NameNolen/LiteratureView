@@ -1,0 +1,10 @@
+GET http://www.163.com
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8000/literature/allArticles/
+
+###
+

@@ -3,7 +3,7 @@ from rest_framework import generics
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.http import JsonResponse, HttpResponse
-
+from collections import OrderedDict
 from .rest_models import *
 
 
@@ -215,12 +215,16 @@ def get_all_articles(request):
     """
     所有文章
     """
-    result = Item.objects.all()
-    serializer = ItemRest(result, many=True)
-    print(serializer)
-    print('\n123123123')
-    print(serializer.data)
-    return JsonResponse(serializer.data, safe=False)
+    title = Field.objects.get(fieldname='title')
+    items = Item.objects.all()
+    item_datas = ItemData.objects.filter(item__in=items).filter(field=title)
+    itemdata_serializer = ItemDataRest(item_datas, many=True)
+    item_title = []
+    for temp in itemdata_serializer.data:
+        dic = temp.items()
+        odict = OrderedDict(dic)
+        item_title += [{'id': odict.pop('item'), 'title': odict.pop('value')}]
+    return JsonResponse(item_title, safe=False)
 
 
 @api_view(['GET'])
