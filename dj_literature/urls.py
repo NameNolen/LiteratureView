@@ -70,5 +70,6 @@ urlpatterns = [
     path('collectionList/<str:collectionName>/', views.get_articles_by_collection_name,
          name='get_articles_by_collection_name'),
     path('tags4item/<int:id>/', views.get_tags_4_item, name='get_tags_4_item'),
+    path('itemdata/<int:item_id>', views.get_itemdata, name='itemdata'),
     path('test', views.url_test, name='test'),
 ]

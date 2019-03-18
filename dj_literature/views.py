@@ -228,6 +228,25 @@ def get_all_articles(request):
 
 
 @api_view(['GET'])
+def get_itemdata(request, item_id):
+    """
+    所有文章
+    """
+    field = Field.objects.all()
+    field_dic = {}
+    for fi in list(field):
+        field_dic[fi.id] = fi.fieldname
+    item = Item.objects.get(id=item_id)
+    item_datas = ItemData.objects.filter(item=item).filter(field__in=field)
+    item_data_serializer = ItemDataRest(item_datas, many=True)
+    item_data_title = {}
+    for temp in item_data_serializer.data:
+        temp_dic = OrderedDict(temp.items())
+        item_data_title[field_dic.get(temp_dic.pop('field'))] = temp_dic.pop('value')
+    return JsonResponse(item_data_title, safe=False)
+
+
+@api_view(['GET'])
 def get_articles_by_tag_name(request, tag_name):
     """
     所有tag下的文章
