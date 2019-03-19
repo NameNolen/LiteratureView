@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework import generics
+from rest_framework import generics, status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.http import JsonResponse, HttpResponse
@@ -308,3 +308,27 @@ def url_test(request):
     entries = importris(risfile)
     # insertitem(entries)
     return HttpResponse("Hello, world. You're at the polls index.")
+
+
+@api_view(['GET', 'POST'])
+def url_test(request):
+    """
+    添加collection
+    """
+    if request.method == 'GET':
+        return Response({"state": "success"})
+
+    elif request.method == 'POST':
+        params = request.data
+        parentid = params['parentcollection']
+        collectionname = params['collectionname']
+        key = params['key']
+        parent_collection = Collection.objects.get(id=parentid)
+        collection = Collection(parentcollection=parent_collection, key=key, collectionname= collectionname)
+
+        if collection.save():
+            serializer = CollectionRest(collection)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response( status=status.HTTP_400_BAD_REQUEST)
+    else:
+        return Response({"state": "success"})

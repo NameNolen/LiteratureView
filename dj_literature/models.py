@@ -322,7 +322,7 @@ class ItemCreator(models.Model):
 
 class Collection(models.Model):
     collectionname = models.CharField(max_length=200, unique=True)
-    parentcollection = models.ForeignKey('self', blank=True, on_delete=models.CASCADE, )
+    parentcollection = models.ForeignKey('self', blank=True, on_delete=models.CASCADE, null=True )
     dateadded = models.DateTimeField('create date', auto_now_add=True)
     datemodified = models.DateTimeField('last modified', auto_now=True)
     key = models.CharField(max_length=200, unique=True)
