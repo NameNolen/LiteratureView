@@ -310,7 +310,7 @@ def url_test(request):
     return HttpResponse("Hello, world. You're at the polls index.")
 
 
-@api_view(['GET', 'POST'])
+@api_view(['POST'])
 def url_test(request):
     """
     添加collection
@@ -319,16 +319,12 @@ def url_test(request):
         return Response({"state": "success"})
 
     elif request.method == 'POST':
-        params = request.data
-        parentid = params['parentcollection']
-        collectionname = params['collectionname']
-        key = params['key']
-        parent_collection = Collection.objects.get(id=parentid)
-        collection = Collection(parentcollection=parent_collection, key=key, collectionname= collectionname)
-
-        if collection.save():
-            serializer = CollectionRest(collection)
+        body = request.body
+        print(body)
+        serializer = CollectionRest(Collection, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response( status=status.HTTP_400_BAD_REQUEST)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     else:
         return Response({"state": "success"})
