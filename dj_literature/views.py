@@ -318,11 +318,12 @@ def collection_(request):
     if request.method == 'GET':
         params = request.data
         parentid = params['parentcollection']
-        if None == parentid:
+        print(parentid)
+        if parentid is None:
             collection = Collection.objects.filter(parent_collection=None)
         else:
-            parent_collection = Collection.objects.get(parentid)
-            collection = Collection.objects.filter(parent_collection=parent_collection)
+            parent_collection = Collection.objects.get(id=parentid)
+            collection = Collection.objects.filter(parentcollection=parent_collection)
         serializer = CollectionRest(collection, many=True)
         return JsonResponse(serializer.data, safe=False)
 

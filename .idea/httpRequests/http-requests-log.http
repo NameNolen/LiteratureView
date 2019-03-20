@@ -1,3 +1,58 @@
+GET http://localhost:8000/literature/collection
+Content-Type: application/json
+
+{
+  "parentcollection": "1"
+  }
+
+<> 2019-03-20T110308.200.json
+
+###
+
+GET http://localhost:8000/literature/collection
+Content-Type: application/json
+
+{
+  "parentcollection": "1"
+  }
+
+<> 2019-03-20T110230.500.txt
+
+###
+
+GET http://localhost:8000/literature/collection
+Content-Type: application/json
+
+{
+  "parentcollection": "1"
+  }
+
+<> 2019-03-20T110136.500.txt
+
+###
+
+GET http://localhost:8000/literature/collection
+Content-Type: application/json
+
+{
+  "parentcollection": "1"
+  }
+
+<> 2019-03-20T105749.500.txt
+
+###
+
+GET http://localhost:8000/literature/collection
+Content-Type: application/json
+
+{
+  "parentcollection": "1"
+  }
+
+<> 2019-03-20T105719.500.txt
+
+###
+
 POST http://localhost:8000/literature/collection
 Content-Type: application/json
 

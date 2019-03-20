@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "dateadded": "2019-03-19 15:22:14",
+    "datemodified": "2019-03-19 15:22:14",
+    "collectionname": "Collections",
+    "key": "1",
+    "parentcollection": {
+      "id": 1,
+      "collectionname": "Collections",
+      "dateadded": "2019-03-19T15:22:14Z",
+      "datemodified": "2019-03-19T15:22:14Z",
+      "key": "1",
+      "parentcollection": {
+        "id": 1,
+        "collectionname": "Collections",
+        "dateadded": "2019-03-19T15:22:14Z",
+        "datemodified": "2019-03-19T15:22:14Z",
+        "key": "1",
+        "parentcollection": 1
+      }
+    }
+  },
+  {
+    "id": 3,
+    "dateadded": "2019-03-20 14:31:08",
+    "datemodified": "2019-03-20 14:31:08",
+    "collectionname": "test11",
+    "key": "454QNFYW",
+    "parentcollection": {
+      "id": 1,
+      "collectionname": "Collections",
+      "dateadded": "2019-03-19T15:22:14Z",
+      "datemodified": "2019-03-19T15:22:14Z",
+      "key": "1",
+      "parentcollection": {
+        "id": 1,
+        "collectionname": "Collections",
+        "dateadded": "2019-03-19T15:22:14Z",
+        "datemodified": "2019-03-19T15:22:14Z",
+        "key": "1",
+        "parentcollection": 1
+      }
+    }
+  },
+  {
+    "id": 4,
+    "dateadded": "2019-03-20 14:43:57",
+    "datemodified": "2019-03-20 14:43:57",
+    "collectionname": "test3",
+    "key": "2F36LGDF",
+    "parentcollection": {
+      "id": 1,
+      "collectionname": "Collections",
+      "dateadded": "2019-03-19T15:22:14Z",
+      "datemodified": "2019-03-19T15:22:14Z",
+      "key": "1",
+      "parentcollection": {
+        "id": 1,
+        "collectionname": "Collections",
+        "dateadded": "2019-03-19T15:22:14Z",
+        "datemodified": "2019-03-19T15:22:14Z",
+        "key": "1",
+        "parentcollection": 1
+      }
+    }
+  }
+]

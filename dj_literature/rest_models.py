@@ -100,7 +100,6 @@ class CollectionRest(serializers.ModelSerializer):
     class Meta:
         model = Collection
         fields = '__all__'
-        depth = 2
 
 
 class CollectionItemRest(serializers.ModelSerializer):
