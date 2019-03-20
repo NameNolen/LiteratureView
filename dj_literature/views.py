@@ -310,21 +310,36 @@ def url_test(request):
     return HttpResponse("Hello, world. You're at the polls index.")
 
 
-@api_view(['POST'])
-def url_test(request):
+@api_view(['GET', 'POST'])
+def collection_(request):
     """
     添加collection
     """
     if request.method == 'GET':
-        return Response({"state": "success"})
+        params = request.data
+        parentid = params['parentcollection']
+        if None == parentid:
+            collection = Collection.objects.filter(parent_collection=None)
+        else:
+            parent_collection = Collection.objects.get(parentid)
+            collection = Collection.objects.filter(parent_collection=parent_collection)
+        serializer = CollectionRest(collection, many=True)
+        return JsonResponse(serializer.data, safe=False)
 
     elif request.method == 'POST':
-        body = request.body
-        print(body)
-        serializer = CollectionRest(Collection, data=request.data)
-        if serializer.is_valid():
-            serializer.save()
+        params = request.data
+        parentid = params['parentcollection']
+        collectionname = params['collectionname']
+        if parentid is None:
+            # //todo 这里面想要把引用引用到自己。parentid或者为null；不要建一个基础的；null数据是他们的祖id
+            collection = Collection(parentcollection=None, key=randomkey(), collectionname=collectionname)
+        else:
+            parent_collection = Collection.objects.get(id=parentid)
+            collection = Collection(parentcollection=parent_collection, key=randomkey(), collectionname=collectionname)
+
+        if collection.save():
+            serializer = CollectionRest(collection)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response(status=status.HTTP_400_BAD_REQUEST)
     else:
         return Response({"state": "success"})

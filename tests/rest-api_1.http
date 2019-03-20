@@ -19,8 +19,8 @@ Content-Type: application/json
 //    datemodified = models.DateTimeField('last modified', auto_now=True)
 //    key = models.CharField(max_length=200, unique=True)
 {
- "collectionname": "test1",
-  "parentcollection": 1,
+ "collectionname": "test3",
+  "parentcollection": null,
   "key": "abc"
   }
 
