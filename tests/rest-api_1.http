@@ -19,8 +19,8 @@ Content-Type: application/json
 //    datemodified = models.DateTimeField('last modified', auto_now=True)
 //    key = models.CharField(max_length=200, unique=True)
 {
- "collectionname": "test3",
-  "parentcollection": null,
+ "collectionname": "test4",
+  "parentcollection": 2,
   "key": "abc"
   }
 
@@ -28,15 +28,39 @@ Content-Type: application/json
 GET http://localhost:8000/literature/collection
 Content-Type: application/json
 
-//collectionname = models.CharField(max_length=200, unique=True)
-//    parentcollection = models.ForeignKey('self', blank=True, on_delete=models.CASCADE, )
-//    dateadded = models.DateTimeField('create date', auto_now_add=True)
-//    datemodified = models.DateTimeField('last modified', auto_now=True)
-//    key = models.CharField(max_length=200, unique=True)
 {
   "parentcollection": "1"
   }
 
+###
+POST http://localhost:8000/literature/tag
+Content-Type: application/json
+
+{
+  "tagtype": "1",
+  "name": "2"
+  }
+#        tagtype = params['tagtype']
+#        name = params['name']
+
+###
+GET http://localhost:8000/literature/tag
+Content-Type: application/json
+
+{
+  "id": "1"
+  }
+#        id_ = params['id']
+#        tag_name = params['tag_name']
+###
+GET http://localhost:8000/literature/tag
+Content-Type: application/json
+
+{
+  "tag_name": "residual S"
+  }
+#        id_ = params['id']
+#        tag_name = params['tag_name']
 ###
 
 

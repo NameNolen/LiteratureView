@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from rest_framework import generics, status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -342,5 +342,42 @@ def collection_(request):
             serializer = CollectionRest(collection)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(status=status.HTTP_400_BAD_REQUEST)
+    else:
+        return Response({"state": "success"})
+
+
+@api_view(['GET', 'POST'])
+def tag_(request):
+    """
+    添加collection
+    """
+    if request.method == 'GET':
+        params = request.data
+        id_ = ""
+        tag_name = ""
+        if 'id' in params:
+            id_ = params['id']
+        if 'tag_name' in params:
+            tag_name = params['tag_name']
+        if id_ is not None and id_ is not "":
+            tag = Tag.objects.get(id=id_)
+            serializer = TagRest(tag)
+            return JsonResponse(serializer.data)
+        elif tag_name is not None and tag_name is not "":
+            tag = Tag.objects.all().filter(name=tag_name)
+            serializer = TagRest(tag, many=True)
+            return JsonResponse(serializer.data, safe=False)
+    elif request.method == 'POST':
+        params = request.data
+        tagtype = ""
+        if 'tagtype' in params:
+            tagtype = params['tagtype']
+        name = params['name']
+        if tagtype is None or tagtype is "":
+            tagtype = "1"
+        tag_1 = Tag(tagtype=tagtype, name=name)
+        tag_1.save()
+        serializer = TagRest(tag_1)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
     else:
         return Response({"state": "success"})
