@@ -38,7 +38,7 @@ Content-Type: application/json
 
 {
   "tagtype": "1",
-  "name": "2"
+  "name": "3"
   }
 #        tagtype = params['tagtype']
 #        name = params['name']

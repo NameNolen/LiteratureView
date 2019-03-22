@@ -1,3 +1,37 @@
+POST http://localhost:8000/literature/tag
+Content-Type: application/json
+
+{
+  "tagtype": "1",
+  "name": "3"
+  }
+
+<> 2019-03-22T094020.201.json
+
+###
+
+GET http://localhost:8000/literature/tag
+Content-Type: application/json
+
+{
+  "id": "1"
+  }
+
+<> 2019-03-22T094012.200.json
+
+###
+
+GET http://localhost:8000/literature/tag
+Content-Type: application/json
+
+{
+  "tag_name": "residual S"
+  }
+
+<> 2019-03-22T094006.200.json
+
+###
+
 GET http://localhost:8000/literature/tag
 Content-Type: application/json
 
@@ -557,45 +591,6 @@ Content-Type: application/json
   }
 
 <> 2019-03-19T113554.500.txt
-
-###
-
-POST http://localhost:8000/literature/collection
-Content-Type: application/json
-
-{
- "collectionname": "test1",
-  "parentcollection": "1",
-  "key": "abc"
-  }
-
-<> 2019-03-19T113518.500.txt
-
-###
-
-POST http://localhost:8000/literature/collection
-Content-Type: application/json
-
-{
- "collectionname": "test1",
-  "parentcollection": "1",
-  "key": "abc"
-  }
-
-<> 2019-03-19T113509.500.txt
-
-###
-
-POST http://localhost:8000/literature/collection
-Content-Type: application/json
-
-{
- "collectionname": "test1",
-  "parentcollection": "1",
-  "key": "abc"
-  }
-
-<> 2019-03-19T113358.500.txt
 
 ###
 
