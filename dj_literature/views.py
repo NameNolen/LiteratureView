@@ -381,3 +381,28 @@ def tag_(request):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
     else:
         return Response({"state": "success"})
+
+
+@api_view(['GET', 'POST'])
+def itemtag(request):
+    """
+    添加collection
+    """
+    if request.method == 'GET':
+        return JsonResponse({"hello": "world"}, safe=False)
+    elif request.method == 'POST':
+        params = request.data
+        # item_id = request.POST.get('item', 37)
+        # tag_id = request.POST.get('tag', 1)
+        item_id = params['item']
+        tag_id = params['tag']
+        print(item_id)
+        print(tag_id)
+        item = Item.objects.get(id=item_id)
+        tag = Tag.objects.get(id=tag_id)
+        item_tag = ItemTag(item=item,tag=tag)
+        item_tag.save()
+        serializer = ItemTagRest(item_tag)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    else:
+        return Response({"state": "success"})

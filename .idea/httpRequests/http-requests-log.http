@@ -1,3 +1,111 @@
+POST http://localhost:8000/literature/itemtag
+Content-Type: application/json
+
+{
+  "item": "38",
+  "tag": "2"
+  }
+
+<> 2019-03-25T110540.201.json
+
+###
+
+POST http://localhost:8000/literature/itemtag
+Content-Type: application/json
+
+{
+  "item": "38",
+  "tag": "2"
+  }
+
+<> 2019-03-25T110514.201.json
+
+###
+
+POST http://localhost:8000/literature/itemtag
+Content-Type: application/json
+
+{
+  "item": "38",
+  "tag": "2"
+  }
+
+<> 2019-03-25T110416.201.json
+
+###
+
+POST http://localhost:8000/literature/itemtag
+Content-Type: application/json
+
+{
+  "item": "37",
+  "tag": "1"
+  }
+
+<> 2019-03-25T110320.500.txt
+
+###
+
+POST http://localhost:8000/literature/itemtag
+Content-Type: application/json
+
+{
+  "item": "37",
+  "tag": "1"
+  }
+
+<> 2019-03-25T110259.500.txt
+
+###
+
+POST http://localhost:8000/literature/itemtag
+Content-Type: application/json
+
+{
+  "item": 37,
+  "tag": 1
+  }
+
+<> 2019-03-25T110157.500.txt
+
+###
+
+POST http://localhost:8000/literature/itemtag
+Content-Type: application/json
+
+{
+  "item": 37,
+  "tag": 1
+  }
+
+<> 2019-03-25T110115.500.txt
+
+###
+
+POST http://localhost:8000/literature/itemtag
+Content-Type: application/json
+
+{
+  "item": "37",
+  "tag": "1"
+  }
+
+<> 2019-03-25T105949.500.txt
+
+###
+
+POST http://localhost:8000/literature/itemtage
+Content-Type: application/json
+
+{
+  "item": "37",
+  "tag": "1"
+  }
+
+<> 2019-03-25T105921.404.html
+
+###
+
 POST http://localhost:8000/literature/tag
 Content-Type: application/json
 
@@ -474,123 +582,6 @@ Content-Type: application/json
   }
 
 <> 2019-03-19T115137.500.txt
-
-###
-
-POST http://localhost:8000/literature/collection
-Content-Type: application/json
-
-{
- "collectionname": "test1",
-  "parentcollection": 1,
-  "key": "abc"
-  }
-
-<> 2019-03-19T114805.500.txt
-
-###
-
-POST http://localhost:8000/literature/collection
-Content-Type: application/json
-
-{
- "collectionname": "test1",
-  "parentcollection": 1,
-  "key": "abc"
-  }
-
-<> 2019-03-19T114726.500.txt
-
-###
-
-POST http://localhost:8000/literature/collection
-Content-Type: application/json
-
-{
- "collectionname": "test1",
-  "parentcollection": 1,
-  "key": "abc"
-  }
-
-<> 2019-03-19T114511.500.txt
-
-###
-
-POST http://localhost:8000/literature/collection
-Content-Type: application/json
-
-{
- "collectionname": "test1",
-  "parentcollection": 1,
-  "key": "abc"
-  }
-
-<> 2019-03-19T114024.500.txt
-
-###
-
-POST http://localhost:8000/literature/collection
-Content-Type: application/json
-
-{
- "collectionname": "test1",
-  "parentcollection": 1,
-  "key": "abc"
-  }
-
-<> 2019-03-19T114009.500.txt
-
-###
-
-POST http://localhost:8000/literature/collection
-Content-Type: application/json
-
-{
- "collectionname": "test1",
-  "parentcollection": 1,
-  "key": "abc"
-  }
-
-<> 2019-03-19T113725.500.txt
-
-###
-
-POST http://localhost:8000/literature/collection
-Content-Type: application/json
-
-{
- "collectionname": "test1",
-  "parentcollection": 1,
-  "key": "abc"
-  }
-
-<> 2019-03-19T113720.500.txt
-
-###
-
-POST http://localhost:8000/literature/collection
-Content-Type: application/json
-
-{
- "collectionname": "test1",
-  "parentcollection": 1,
-  "key": "abc"
-  }
-
-<> 2019-03-19T113650.500.txt
-
-###
-
-POST http://localhost:8000/literature/collection
-Content-Type: application/json
-
-{
- "collectionname": "test1",
-  "parentcollection": "1",
-  "key": "abc"
-  }
-
-<> 2019-03-19T113554.500.txt
 
 ###
 

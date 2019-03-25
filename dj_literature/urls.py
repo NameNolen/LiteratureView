@@ -73,5 +73,6 @@ urlpatterns = [
     path('itemdata/<int:item_id>', views.get_itemdata, name='itemdata'),
     path('collection', views.collection_, name='collectionsssss'),
     path('tag', views.tag_, name='tag_'),
+    path('itemtag', views.itemtag, name='itemtag'),
     path('test', views.url_test, name='test'),
 ]

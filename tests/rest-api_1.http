@@ -62,5 +62,15 @@ Content-Type: application/json
 #        id_ = params['id']
 #        tag_name = params['tag_name']
 ###
+POST http://localhost:8000/literature/itemtag
+Content-Type: application/json
+
+{
+  "item": "38",
+  "tag": "2"
+  }
+#        id_ = params['id']
+#        tag_name = params['tag_name']
+###
 
 
