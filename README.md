@@ -32,4 +32,11 @@ Django website for manage literature and RSS Feed.
 ### 基础的数据
 在插入model的时候需要有些基础数据；不如field，type等
 
+`python manage.py makemigrations --empty dj_literature`
+
+or
+
+`django-admin dumpdata`  then `manage.py loaddata \<fixturename>`
+
+推荐下面的方式，可以手动更改数据
 数据放在demand/init_db下
