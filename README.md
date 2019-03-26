@@ -28,3 +28,8 @@ Django website for manage literature and RSS Feed.
 
 ### rest-ful django api
 安装 `pip install djangorestframework` 依赖包.
+
+### 基础的数据
+在插入model的时候需要有些基础数据；不如field，type等
+
+数据放在demand/init_db下
