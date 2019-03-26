@@ -106,7 +106,6 @@ class CollectionItemRest(serializers.ModelSerializer):
     class Meta:
         model = CollectionItem
         fields = '__all__'
-        depth=2
 
 
 class DeletedItemRest(serializers.ModelSerializer):

@@ -1,3 +1,73 @@
+POST http://localhost:8000/literature/collectionitem
+Content-Type: application/json
+
+{
+  "item": "38",
+  "collection": "2"
+  }
+
+<> 2019-03-26T103256.201.json
+
+###
+
+POST http://localhost:8000/literature/collectionitem
+Content-Type: application/json
+
+{
+  "item": "38",
+  "collection": "2"
+  }
+
+<> 2019-03-26T103241.201.json
+
+###
+
+POST http://localhost:8000/literature/collectionitem
+Content-Type: application/json
+
+{
+  "item": "38",
+  "collection": "2"
+  }
+
+<> 2019-03-26T103156.201.json
+
+###
+
+POST http://localhost:8000/literature/collectionitem
+Content-Type: application/json
+
+{
+  "item": "38",
+  "collection": "2"
+  }
+
+###
+
+POST http://localhost:8000/literature/collectionitem
+Content-Type: application/json
+
+{
+  "item": "38",
+  "collection": "2"
+  }
+
+<> 2019-03-26T102957.500.txt
+
+###
+
+POST http://localhost:8000/literature/collectionitem
+Content-Type: application/json
+
+{
+  "item": "38",
+  "collection": "2"
+  }
+
+<> 2019-03-26T102529.500.txt
+
+###
+
 POST http://localhost:8000/literature/itemtag
 Content-Type: application/json
 
@@ -506,82 +576,6 @@ Content-Type: application/json
   }
 
 <> 2019-03-20T103045.500.txt
-
-###
-
-POST http://localhost:8000/literature/collection
-Content-Type: application/json
-
-{
- "collectionname": "test1",
-  "parentcollection": 1,
-  "key": "abc"
-  }
-
-<> 2019-03-20T103030.500.txt
-
-###
-
-POST http://localhost:8000/literature/collection
-Content-Type: application/json
-
-{
- "collectionname": "test1",
-  "parentcollection": 1,
-  "key": "abc"
-  }
-
-<> 2019-03-20T102912.500.txt
-
-###
-
-POST http://localhost:8000/literature/collection
-Content-Type: application/json
-
-{
- "collectionname": "test1",
-  "parentcollection": 1,
-  "key": "abc"
-  }
-
-<> 2019-03-20T102146.500.txt
-
-###
-
-POST http://localhost:8000/literature/collection
-Content-Type: application/json
-
-{
- "collectionname": "test1",
-  "parentcollection": 1,
-  "key": "abc"
-  }
-
-<> 2019-03-20T102131.500.txt
-
-###
-
-POST http://localhost:8000/literature/collection
-Content-Type: application/json
-
-{
- "collectionname": "test1",
-  "parentcollection": 1,
-  "key": "abc"
-  }
-
-###
-
-POST http://localhost:8000/literature/collection
-Content-Type: application/json
-
-{
- "collectionname": "test1",
-  "parentcollection": 1,
-  "key": "abc"
-  }
-
-<> 2019-03-19T115137.500.txt
 
 ###
 
