@@ -207,7 +207,7 @@ def get_dashboard(request):
     """
     总菜单
     """
-    return Response([{"name": "All articles", "key": "all"}, {"name": "Unread", "Key": "unread"}])
+    return Response([{"name": "All articles", "key": "all"}, {"name": "Unread", "key": "unread"}])
 
 
 @api_view(['GET'])
