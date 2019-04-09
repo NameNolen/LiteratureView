@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .div1 {
+            border: 1px solid green;
+            width: 100px;
+            height: 100px;
+            color: green;
+            border-radius: 5px;
+        }
+        .div2 {
+            border: 1px solid red;
+            width: 50px;
+            height: 50px;
+            color: red;
+            border-radius: 5px;
+
+            transform-origin: 10px 10px;
+            transform: rotate(-30deg) translate(100px, 100px) scale(.5, 1) skew(30deg,10deg) ;
+        }
+        {#transform: rotate(-30deg) translate(100px, 100px) scale(.5, 1) skew(30deg,10deg) matrix(1,1,0,0,0,0);#}
+         {#transform-origin:100px 100px ;{% comment %}基点{% endcomment %}#}
+        {#rotate 绕原来的位置转动#}
+        .div3 {
+            border: 1px solid red;
+            width: 50px;
+            height: 50px;
+            color: red;
+            border-radius: 5px;
+            background-color: blue;
+            transition: background 0.5s ease-in,color 0.3s ease-out;
+            -moz-transition: background 0.5s ease-in,color 0.3s ease-out;
+        }
+          {#transition:[<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'> [, [<'transition-property'> || <'transition-duration'> || <'transition-timing-function'> || <'transition-delay'>]]*#}
+  {#transition-timing-function ： ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(<number>, <number>, <number>, <number>) [, ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(<number>, <number>, <number>, <number>)]*#}
+    </style>
+    <script type="text/javascript">
+
+        function changeColor() {
+            const ele = document.getElementById('div3');
+            ele.style.backgroundColor = 'red';
+            ele.style.color = 'black';
+
+        }
+    </script>
+</head>
+<body>
+    <div class="div1">
+        <div class="div2"></div>
+        <div class="div3" id="div3" onclick="changeColor();">123123123</div>
+    </div>
+</body>
+</html>
